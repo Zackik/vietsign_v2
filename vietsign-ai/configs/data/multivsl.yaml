@@ -1,0 +1,8 @@
+dataset:
+  name: Multi-VSL
+  adapter: multiview_csv
+  root: data/raw/multivsl
+  metadata_csv: data/metadata/multivsl.csv
+
+validation:
+  inspect_videos: false

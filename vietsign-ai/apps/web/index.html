@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VietSignAI Realtime</title>
+    <style>
+      :root {
+        color: #15201c;
+        background: #f5f7f6;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      button { font: inherit; }
+
+      main {
+        width: min(1120px, calc(100vw - 28px));
+        margin: 0 auto;
+        padding: 22px 0 32px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      h1 { margin: 0 0 4px; font-size: clamp(24px, 4vw, 36px); }
+      p { margin: 0; color: #5c6b65; }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 6px 10px;
+        border: 1px solid #ccd8d2;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #335047;
+        white-space: nowrap;
+      }
+
+      .stage {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #07100d;
+        border: 1px solid #ccd8d2;
+        border-radius: 8px;
+      }
+
+      video,
+      canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      video { opacity: 0; pointer-events: none; }
+
+      .practice {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+        gap: 14px;
+        align-items: start;
+      }
+
+      .guide {
+        background: #ffffff;
+        border: 1px solid #dbe4df;
+        border-radius: 8px;
+        padding: 14px;
+      }
+
+      .guide-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .guide h2 {
+        margin: 0;
+        color: #173d35;
+        font-size: 20px;
+      }
+
+      .guide small {
+        display: block;
+        margin-top: 4px;
+        color: #607069;
+      }
+
+      .guide-video {
+        position: static;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        background: #07100d;
+        border-radius: 6px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .guide-controls {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .guide-controls button {
+        flex: 1;
+        min-height: 38px;
+        padding: 8px 10px;
+        border: 1px solid #aebfb7;
+        border-radius: 6px;
+        background: #ffffff;
+        color: #13231e;
+        cursor: pointer;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .controls button {
+        min-height: 42px;
+        padding: 9px 13px;
+        border: 1px solid #aebfb7;
+        border-radius: 6px;
+        background: #ffffff;
+        color: #13231e;
+        cursor: pointer;
+      }
+
+      .controls button.primary {
+        background: #173d35;
+        color: #ffffff;
+        border-color: #173d35;
+      }
+
+      .output {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(240px, 0.8fr);
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .translation,
+      .panel {
+        background: #ffffff;
+        border: 1px solid #dbe4df;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .translation span,
+      .panel span {
+        display: block;
+        color: #607069;
+        margin-bottom: 8px;
+      }
+
+      #vietnamese-label {
+        margin: 0;
+        font-size: clamp(34px, 7vw, 72px);
+        line-height: 1.05;
+        color: #173d35;
+      }
+
+      #confidence {
+        margin-top: 8px;
+        color: #607069;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .metric {
+        padding: 10px;
+        border-radius: 6px;
+        background: #f5f8f6;
+      }
+
+      .metric strong { display: block; color: #173d35; font-size: 22px; }
+      .note { margin-top: 12px; font-size: 14px; color: #6c5f2b; }
+      .top-k {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .top-k span {
+        margin: 0;
+        padding: 6px 8px;
+        border-radius: 6px;
+        background: #eef5f2;
+        color: #335047;
+        font-size: 14px;
+      }
+
+      @media (max-width: 780px) {
+        header { display: block; }
+        .status { margin-top: 10px; }
+        .practice { grid-template-columns: 1fr; }
+        .output { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>VietSignAI Realtime</h1>
+          <p>Bật camera, làm cử chỉ, chữ tiếng Việt sẽ hiện bên dưới.</p>
+        </div>
+        <div id="status" class="status">Đang tải detector...</div>
+      </header>
+
+      <section class="practice">
+        <div>
+          <section class="stage" aria-label="Camera realtime">
+            <video id="camera" autoplay muted playsinline></video>
+            <canvas id="overlay"></canvas>
+          </section>
+
+          <div class="controls">
+            <button id="start" class="primary">Bật camera + AI</button>
+            <button id="stop">Tắt camera</button>
+          </div>
+        </div>
+
+        <aside class="guide" aria-label="Video mẫu hướng dẫn cử chỉ">
+          <div class="guide-head">
+            <div>
+              <h2 id="guide-label">Đang tải video mẫu...</h2>
+              <small id="guide-meta">-</small>
+            </div>
+          </div>
+          <video id="guide-video" class="guide-video" controls muted loop playsinline></video>
+          <div class="guide-controls">
+            <button id="guide-prev">Trước</button>
+            <button id="guide-next">Tiếp</button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="output">
+        <div class="translation">
+          <span>Tiếng Việt</span>
+          <h2 id="vietnamese-label">Chưa nhận ra cử chỉ</h2>
+          <div id="confidence">Độ tin cậy: -</div>
+          <div id="top-k" class="top-k"></div>
+        </div>
+
+        <div class="panel">
+          <span>Landmarks realtime</span>
+          <div class="metrics">
+            <div class="metric"><strong id="left-count">0</strong>Tay trái</div>
+            <div class="metric"><strong id="right-count">0</strong>Tay phải</div>
+            <div class="metric"><strong id="pose-count">0</strong>Cơ thể</div>
+          </div>
+          <p id="model-note" class="note">
+            Đang dùng camera realtime + pretrained VideoMAE cho 100 cử chỉ ViSignLanguage. Kết quả cập nhật theo từng clip ngắn nên sẽ có độ trễ nhỏ.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js"></script>
+    <script>
+      const video = document.getElementById("camera");
+      const canvas = document.getElementById("overlay");
+      const ctx = canvas.getContext("2d");
+      const statusEl = document.getElementById("status");
+      const labelEl = document.getElementById("vietnamese-label");
+      const confidenceEl = document.getElementById("confidence");
+      const topKEl = document.getElementById("top-k");
+      const guideVideo = document.getElementById("guide-video");
+      const guideLabel = document.getElementById("guide-label");
+      const guideMeta = document.getElementById("guide-meta");
+      const counts = {
+        left: document.getElementById("left-count"),
+        right: document.getElementById("right-count"),
+        pose: document.getElementById("pose-count"),
+      };
+
+      let camera = null;
+      let running = false;
+      let stableLabel = "Chưa nhận ra cử chỉ";
+      let stableFrames = 0;
+      const recentLabels = [];
+      let mediaRecorder = null;
+      let recorderTimer = null;
+      let pendingPrediction = false;
+      let lastAiPredictionAt = 0;
+      const API_BASE = "http://127.0.0.1:8000";
+      const CLIP_MS = 2200;
+      const CLIP_PAUSE_MS = 250;
+      let guideVideos = [];
+      let guideIndex = 0;
+
+      const holistic = new Holistic({
+        locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`,
+      });
+
+      holistic.setOptions({
+        modelComplexity: 0,
+        smoothLandmarks: true,
+        enableSegmentation: false,
+        refineFaceLandmarks: false,
+        minDetectionConfidence: 0.55,
+        minTrackingConfidence: 0.55,
+        selfieMode: false,
+      });
+
+      holistic.onResults(onResults);
+      statusEl.textContent = "Sẵn sàng";
+      loadGuideVideos();
+
+      document.getElementById("guide-prev").addEventListener("click", () => {
+        if (!guideVideos.length) return;
+        showGuideVideo((guideIndex - 1 + guideVideos.length) % guideVideos.length);
+      });
+
+      document.getElementById("guide-next").addEventListener("click", () => {
+        if (!guideVideos.length) return;
+        showGuideVideo((guideIndex + 1) % guideVideos.length);
+      });
+
+      document.getElementById("start").addEventListener("click", async () => {
+        if (running) return;
+        running = true;
+        statusEl.textContent = "Đang mở camera...";
+        camera = new Camera(video, {
+          width: 640,
+          height: 480,
+          onFrame: async () => {
+            await holistic.send({ image: video });
+          },
+        });
+        await camera.start();
+        statusEl.textContent = "Đang nhận diện realtime";
+        startClipPredictionLoop();
+      });
+
+      document.getElementById("stop").addEventListener("click", () => {
+        running = false;
+        if (camera) {
+          camera.stop();
+          camera = null;
+        }
+        stopClipPredictionLoop();
+        if (video.srcObject) {
+          video.srcObject.getTracks().forEach((track) => track.stop());
+          video.srcObject = null;
+        }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        setLabel("Chưa nhận ra cử chỉ", 0);
+        topKEl.innerHTML = "";
+        updateCounts({});
+        statusEl.textContent = "Đã tắt";
+      });
+
+      function onResults(results) {
+        resizeCanvas(results.image);
+        draw(results);
+        updateCounts(results);
+        const prediction = classifyGesture(results);
+        if (Date.now() - lastAiPredictionAt > CLIP_MS * 2) {
+          updateStablePrediction(prediction);
+        }
+      }
+
+      async function loadGuideVideos() {
+        try {
+          const response = await fetch(`${API_BASE}/guide/videos?limit=100&unique_labels=true`);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const payload = await response.json();
+          guideVideos = payload.videos || [];
+          if (!guideVideos.length) {
+            guideLabel.textContent = "Chưa có video mẫu";
+            guideMeta.textContent = "Không tìm thấy metadata local";
+            return;
+          }
+          const firstUsefulIndex = Math.max(0, guideVideos.findIndex((item) => item.label === "Biết"));
+          showGuideVideo(firstUsefulIndex);
+        } catch (error) {
+          guideLabel.textContent = "Không tải được video mẫu";
+          guideMeta.textContent = "Kiểm tra API ở cổng 8000";
+        }
+      }
+
+      function showGuideVideo(index) {
+        guideIndex = index;
+        const item = guideVideos[guideIndex];
+        guideLabel.textContent = item.label || "Không rõ nhãn";
+        const current = guideIndex + 1;
+        const total = guideVideos.length;
+        const duration = item.duration ? `${Number(item.duration).toFixed(1)}s` : "-";
+        guideMeta.textContent = `${current}/${total} · sample ${item.sample_id} · ${duration}`;
+        guideVideo.src = `${API_BASE}/guide/videos/${encodeURIComponent(item.sample_id)}/file`;
+        guideVideo.load();
+      }
+
+      guideVideo.addEventListener("error", () => {
+        guideMeta.textContent = "Video mẫu chưa phát được, thử bấm Tiếp";
+      });
+
+      function startClipPredictionLoop() {
+        if (!video.srcObject || !window.MediaRecorder) {
+          statusEl.textContent = "Trình duyệt không hỗ trợ ghi clip realtime";
+          return;
+        }
+        if (!running || pendingPrediction) return;
+        const mimeType = selectMimeType();
+        const chunks = [];
+        try {
+          mediaRecorder = new MediaRecorder(video.srcObject, mimeType ? { mimeType } : undefined);
+        } catch (error) {
+          statusEl.textContent = "Không thể tạo clip từ camera";
+          return;
+        }
+        mediaRecorder.ondataavailable = (event) => {
+          if (event.data && event.data.size > 0) chunks.push(event.data);
+        };
+        mediaRecorder.onstop = () => {
+          const blob = new Blob(chunks, { type: mimeType || "video/webm" });
+          if (running && blob.size > 0) {
+            sendClipForPrediction(blob, mimeType || "video/webm");
+          } else if (running) {
+            window.setTimeout(startClipPredictionLoop, CLIP_PAUSE_MS);
+          }
+        };
+        mediaRecorder.start();
+        recorderTimer = window.setTimeout(() => {
+          if (mediaRecorder && mediaRecorder.state === "recording") {
+            mediaRecorder.stop();
+          }
+        }, CLIP_MS);
+      }
+
+      function stopClipPredictionLoop() {
+        if (recorderTimer) {
+          window.clearTimeout(recorderTimer);
+          recorderTimer = null;
+        }
+        if (mediaRecorder && mediaRecorder.state === "recording") {
+          mediaRecorder.stop();
+        }
+        mediaRecorder = null;
+        pendingPrediction = false;
+      }
+
+      async function sendClipForPrediction(blob, mimeType) {
+        if (pendingPrediction) return;
+        pendingPrediction = true;
+        statusEl.textContent = "Đang dịch cử chỉ...";
+        const extension = mimeType.includes("mp4") ? "mp4" : "webm";
+        const form = new FormData();
+        form.append("video", blob, `camera.${extension}`);
+        form.append("top_k", "3");
+        try {
+          const response = await fetch(`${API_BASE}/predict/pretrained-video`, {
+            method: "POST",
+            body: form,
+          });
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          const result = await response.json();
+          lastAiPredictionAt = Date.now();
+          setLabel(result.label, result.confidence || 0);
+          renderTopK(result.top_k || []);
+          statusEl.textContent = "Đang nhận diện realtime";
+        } catch (error) {
+          statusEl.textContent = "API chưa sẵn sàng hoặc clip không đọc được";
+        } finally {
+          pendingPrediction = false;
+          if (running) {
+            window.setTimeout(startClipPredictionLoop, CLIP_PAUSE_MS);
+          }
+        }
+      }
+
+      function renderTopK(items) {
+        topKEl.innerHTML = "";
+        items.slice(0, 3).forEach((item) => {
+          const chip = document.createElement("span");
+          const confidence = Number(item.confidence || 0) * 100;
+          chip.textContent = `${item.label} ${confidence.toFixed(0)}%`;
+          topKEl.appendChild(chip);
+        });
+      }
+
+      function selectMimeType() {
+        const candidates = ["video/webm;codecs=vp8", "video/webm", "video/mp4"];
+        return candidates.find((item) => MediaRecorder.isTypeSupported(item)) || "";
+      }
+
+      function resizeCanvas(image) {
+        const width = image?.width || video.videoWidth || 640;
+        const height = image?.height || video.videoHeight || 480;
+        if (canvas.width !== width || canvas.height !== height) {
+          canvas.width = width;
+          canvas.height = height;
+        }
+      }
+
+      function draw(results) {
+        ctx.save();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.translate(canvas.width, 0);
+        ctx.scale(-1, 1);
+        ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+        drawConnectors(ctx, results.poseLandmarks, POSE_CONNECTIONS, { color: "#4fd1c5", lineWidth: 3 });
+        drawLandmarks(ctx, results.poseLandmarks, { color: "#d2f7f0", radius: 2 });
+        drawConnectors(ctx, results.leftHandLandmarks, HAND_CONNECTIONS, { color: "#60a5fa", lineWidth: 3 });
+        drawLandmarks(ctx, results.leftHandLandmarks, { color: "#dbeafe", radius: 3 });
+        drawConnectors(ctx, results.rightHandLandmarks, HAND_CONNECTIONS, { color: "#f472b6", lineWidth: 3 });
+        drawLandmarks(ctx, results.rightHandLandmarks, { color: "#fce7f3", radius: 3 });
+        ctx.restore();
+      }
+
+      function updateCounts(results) {
+        counts.left.textContent = String(results.leftHandLandmarks?.length || 0);
+        counts.right.textContent = String(results.rightHandLandmarks?.length || 0);
+        counts.pose.textContent = String(results.poseLandmarks?.length || 0);
+      }
+
+      function updateStablePrediction(prediction) {
+        recentLabels.push(prediction.label);
+        if (recentLabels.length > 12) recentLabels.shift();
+        const voted = majority(recentLabels);
+        if (voted === stableLabel) {
+          stableFrames += 1;
+        } else {
+          stableLabel = voted;
+          stableFrames = 1;
+        }
+        const confidence = Math.min(0.95, prediction.confidence * Math.min(1, stableFrames / 6));
+        setLabel(voted, confidence);
+      }
+
+      function setLabel(label, confidence) {
+        labelEl.textContent = label;
+        confidenceEl.textContent = confidence > 0 ? `Độ tin cậy: ${(confidence * 100).toFixed(0)}%` : "Độ tin cậy: -";
+      }
+
+      function majority(values) {
+        const counts = new Map();
+        values.forEach((value) => counts.set(value, (counts.get(value) || 0) + 1));
+        return [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || "Chưa nhận ra cử chỉ";
+      }
+
+      function classifyGesture(results) {
+        const left = results.leftHandLandmarks;
+        const right = results.rightHandLandmarks;
+        const pose = results.poseLandmarks;
+        const leftOpen = isOpenHand(left);
+        const rightOpen = isOpenHand(right);
+        const leftRaised = isHandRaised(left, pose);
+        const rightRaised = isHandRaised(right, pose);
+        const anyHand = Boolean(left || right);
+
+        if (!anyHand) return { label: "Chưa nhận ra cử chỉ", confidence: 0 };
+        if (leftOpen && rightOpen && (leftRaised || rightRaised)) return { label: "Chào", confidence: 0.72 };
+        if (leftOpen && rightOpen) return { label: "Cảm ơn", confidence: 0.62 };
+        if (rightOpen && isHandNearFace(right)) return { label: "Xin lỗi", confidence: 0.58 };
+        if (leftOpen && isHandNearFace(left)) return { label: "Xin lỗi", confidence: 0.58 };
+        if (rightRaised || leftRaised) return { label: "Tôi", confidence: 0.52 };
+        if (left || right) return { label: "Đang phát hiện tay", confidence: 0.35 };
+        return { label: "Chưa nhận ra cử chỉ", confidence: 0 };
+      }
+
+      function isOpenHand(hand) {
+        if (!hand || hand.length < 21) return false;
+        const wrist = hand[0];
+        const tips = [8, 12, 16, 20].map((index) => hand[index]);
+        const mids = [6, 10, 14, 18].map((index) => hand[index]);
+        return tips.filter((tip, index) => tip.y < mids[index].y && distance(tip, wrist) > 0.12).length >= 3;
+      }
+
+      function isHandRaised(hand, pose) {
+        if (!hand || !pose || pose.length < 13) return false;
+        const wrist = hand[0];
+        const shoulderY = Math.min(pose[11].y, pose[12].y);
+        return wrist.y < shoulderY;
+      }
+
+      function isHandNearFace(hand) {
+        if (!hand || hand.length < 21) return false;
+        const wrist = hand[0];
+        const indexTip = hand[8];
+        return wrist.y < 0.38 || indexTip.y < 0.34;
+      }
+
+      function distance(a, b) {
+        return Math.hypot(a.x - b.x, a.y - b.y);
+      }
+    </script>
+  </body>
+</html>

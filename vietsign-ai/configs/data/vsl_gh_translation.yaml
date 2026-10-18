@@ -1,0 +1,8 @@
+dataset:
+  name: VSL-GH
+  adapter: custom_csv
+  root: data/raw/vsl_gh
+  metadata_csv: data/metadata/vsl_gh_translation.csv
+
+validation:
+  inspect_videos: false

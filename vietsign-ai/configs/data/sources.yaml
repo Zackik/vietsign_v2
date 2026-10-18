@@ -1,0 +1,41 @@
+sources:
+  - name: VOYA_VSL
+    task: isolated_sign_recognition
+    source_url: https://huggingface.co/datasets/Kateht/VOYA_VSL
+    access_type: public_huggingface
+    license: mit
+    expected_format: "Hugging Face dataset repo with Merged/class_XXXX.npz files; dataset.py declares sequences [60,1605] and labels int32."
+    local_target_directory: data/raw/voya_vsl
+    status: metadata_verified_remote_not_downloaded
+  - name: VSL400
+    task: isolated_sign_recognition_video
+    source_url: https://doi.org/10.5281/zenodo.17943574
+    access_type: controlled_access_dua
+    license: unknown
+    expected_format: "Controlled-access multi-view MP4 dataset; official docs describe front_view, left_view, right_view plus JSON metadata."
+    local_target_directory: data/raw/vsl400
+    status: waiting_for_authorized_data
+  - name: Parallel-Corpus-Vie-VSL
+    task: gloss_text_translation
+    source_url: https://github.com/BichDiep/Parallel-Corpus-Vie-VSL
+    access_type: public_github
+    license: unknown
+    expected_format: "Vietnamese/VSL parallel corpus files such as Vie10k.txt, VSL10k.txt, Corpus-Vie-VSL-10K.xlsx and RAR archives."
+    local_target_directory: data/raw/parallel_corpus_vie_vsl
+    status: metadata_verified_remote_not_downloaded
+  - name: ViSL-News
+    task: sentence_level_video_text_translation
+    source_url: https://huggingface.co/datasets/kha2612/ViSL-News
+    access_type: public_huggingface_metadata
+    license: other
+    expected_format: "CSV split metadata with file_id/start/end/text/signer_id; dataset card reports sentence-level video-text pairs from news broadcasts."
+    local_target_directory: data/raw/visl_news
+    status: metadata_verified_remote_not_downloaded
+  - name: ViSignLanguage-Video
+    task: isolated_sign_recognition_video
+    source_url: https://huggingface.co/datasets/star092304/ViSignLanguage-Video
+    access_type: public_huggingface
+    license: cc-by-4.0
+    expected_format: "dataset.zip plus dataset_metadata.csv with split/label/filename/fps/frame/resolution fields; suitable for class-label Vietnamese sign recognition prototypes."
+    local_target_directory: data/raw/visignlanguage_video
+    status: metadata_verified_remote_not_downloaded

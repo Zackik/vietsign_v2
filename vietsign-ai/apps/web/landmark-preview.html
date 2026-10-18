@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VietSignAI Realtime Landmark Preview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0f141b;
+        --panel: #171f2a;
+        --text: #f8fafc;
+        --muted: #a7b0bf;
+        --line: #2c3848;
+        --accent: #5eead4;
+        --warn: #fbbf24;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 24px 0;
+      }
+
+      header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(24px, 4vw, 38px);
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .stage {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #05070a;
+        border: 1px solid var(--line);
+      }
+
+      video,
+      canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      video {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        padding: 14px;
+        margin-top: 12px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+
+      button,
+      label.toggle {
+        min-height: 40px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        background: #eef2f7;
+        color: #101418;
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      label.toggle {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        background: #101820;
+        color: var(--text);
+      }
+
+      #status {
+        margin-left: auto;
+        color: var(--muted);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .metric {
+        padding: 12px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--accent);
+      }
+
+      .note {
+        margin-top: 12px;
+        color: var(--warn);
+      }
+
+      .transcript {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .box {
+        min-height: 96px;
+        padding: 12px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+      }
+
+      .box h2 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+
+      #live-label {
+        font-size: clamp(24px, 4vw, 42px);
+        color: var(--accent);
+      }
+
+      #transcript {
+        color: var(--text);
+        line-height: 1.6;
+        white-space: pre-wrap;
+      }
+
+      #vietnamese-output {
+        font-size: clamp(28px, 5vw, 48px);
+        color: #f8fafc;
+        line-height: 1.25;
+      }
+
+      @media (max-width: 760px) {
+        header {
+          display: block;
+        }
+
+        .metrics {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .transcript {
+          grid-template-columns: 1fr;
+        }
+
+        #status {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Realtime Landmark Preview</h1>
+          <p>Webcam → MediaPipe Holistic nhẹ → pose, left hand, right hand overlay.</p>
+        </div>
+      </header>
+
+      <section class="stage">
+        <video id="camera" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+      </section>
+
+      <div class="toolbar">
+        <button id="start">Bật camera + landmarks</button>
+        <button id="stop">Tắt</button>
+        <label class="toggle">
+          <input id="mirror" type="checkbox" />
+          Lật gương preview
+        </label>
+        <span id="status">Đang tải detector...</span>
+      </div>
+
+      <section class="metrics">
+        <div class="metric"><strong id="pose-count">0</strong>Pose landmarks</div>
+        <div class="metric"><strong id="face-count">off</strong>Face landmarks</div>
+        <div class="metric"><strong id="left-count">0</strong>Left hand landmarks</div>
+        <div class="metric"><strong id="right-count">0</strong>Right hand landmarks</div>
+      </section>
+
+      <section class="transcript">
+        <div class="box">
+          <h2>Live dev label</h2>
+          <div id="live-label">chưa rõ</div>
+        </div>
+        <div class="box">
+          <h2>Dev transcript</h2>
+          <div id="transcript">Transcript thử nghiệm sẽ hiện ở đây.</div>
+        </div>
+        <div class="box">
+          <h2>Bản dịch tiếng Việt realtime</h2>
+          <div id="vietnamese-output">Chưa nhận ra cử chỉ.</div>
+        </div>
+      </section>
+
+      <p class="note">
+        Đây là transcript demo bằng rule đơn giản từ landmarks, chưa phải nhận dạng/dịch VSL thật.
+        Mục tiêu là kiểm tra đường webcam → landmarks → chữ.
+      </p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js"></script>
+    <script>
+      const video = document.getElementById("camera");
+      const canvas = document.getElementById("overlay");
+      const ctx = canvas.getContext("2d");
+      const statusEl = document.getElementById("status");
+      const mirrorEl = document.getElementById("mirror");
+      const counts = {
+        pose: document.getElementById("pose-count"),
+        face: document.getElementById("face-count"),
+        left: document.getElementById("left-count"),
+        right: document.getElementById("right-count"),
+      };
+      const liveLabel = document.getElementById("live-label");
+      const transcript = document.getElementById("transcript");
+      const vietnameseOutput = document.getElementById("vietnamese-output");
+
+      let camera = null;
+      let running = false;
+      let stableLabel = "chưa rõ";
+      let stableCount = 0;
+      let lastCommitted = "";
+      const committed = [];
+
+      const holistic = new Holistic({
+        locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`,
+      });
+
+      holistic.setOptions({
+        modelComplexity: 0,
+        smoothLandmarks: true,
+        enableSegmentation: false,
+        refineFaceLandmarks: false,
+        minDetectionConfidence: 0.5,
+        minTrackingConfidence: 0.5,
+        selfieMode: false,
+      });
+
+      holistic.onResults(onResults);
+      statusEl.textContent = "Detector sẵn sàng.";
+
+      document.getElementById("start").addEventListener("click", async () => {
+        if (running) return;
+        running = true;
+        statusEl.textContent = "Đang mở camera...";
+        camera = new Camera(video, {
+          width: 640,
+          height: 480,
+          onFrame: async () => {
+            await holistic.send({ image: video });
+          },
+        });
+        await camera.start();
+        statusEl.textContent = "Đang chạy landmark preview.";
+      });
+
+      document.getElementById("stop").addEventListener("click", () => {
+        running = false;
+        if (camera) {
+          camera.stop();
+          camera = null;
+        }
+        if (video.srcObject) {
+          video.srcObject.getTracks().forEach((track) => track.stop());
+          video.srcObject = null;
+        }
+        clearCanvas();
+        updateCounts({});
+        resetTranscript();
+        statusEl.textContent = "Đã tắt.";
+      });
+
+      function onResults(results) {
+        resizeCanvas(results.image);
+        ctx.save();
+        clearCanvas();
+        if (mirrorEl.checked) {
+          ctx.translate(canvas.width, 0);
+          ctx.scale(-1, 1);
+        }
+
+        ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+        drawConnectors(ctx, results.poseLandmarks, POSE_CONNECTIONS, { color: "#5eead4", lineWidth: 3 });
+        drawLandmarks(ctx, results.poseLandmarks, { color: "#ccfbf1", lineWidth: 1, radius: 2 });
+        drawConnectors(ctx, results.leftHandLandmarks, HAND_CONNECTIONS, { color: "#60a5fa", lineWidth: 3 });
+        drawLandmarks(ctx, results.leftHandLandmarks, { color: "#dbeafe", lineWidth: 1, radius: 3 });
+        drawConnectors(ctx, results.rightHandLandmarks, HAND_CONNECTIONS, { color: "#f472b6", lineWidth: 3 });
+        drawLandmarks(ctx, results.rightHandLandmarks, { color: "#fce7f3", lineWidth: 1, radius: 3 });
+        ctx.restore();
+
+        updateCounts(results);
+        updateDevTranscript(results);
+      }
+
+      function resizeCanvas(image) {
+        const width = image?.width || video.videoWidth || 1280;
+        const height = image?.height || video.videoHeight || 720;
+        if (canvas.width !== width || canvas.height !== height) {
+          canvas.width = width;
+          canvas.height = height;
+        }
+      }
+
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function updateCounts(results) {
+        counts.pose.textContent = String(results.poseLandmarks?.length || 0);
+        counts.face.textContent = "off";
+        counts.left.textContent = String(results.leftHandLandmarks?.length || 0);
+        counts.right.textContent = String(results.rightHandLandmarks?.length || 0);
+      }
+
+      function updateDevTranscript(results) {
+        const label = classifyDevGesture(results);
+        const vietnamese = translateDevLabel(label);
+        liveLabel.textContent = label;
+        vietnameseOutput.textContent = vietnamese;
+
+        if (label === stableLabel) {
+          stableCount += 1;
+        } else {
+          stableLabel = label;
+          stableCount = 1;
+        }
+
+        if (stableCount >= 18 && label !== "chưa rõ" && label !== lastCommitted) {
+          lastCommitted = label;
+          committed.push(label);
+          transcript.textContent = committed.map(translateDevLabel).join(" → ");
+        }
+      }
+
+      function classifyDevGesture(results) {
+        const left = results.leftHandLandmarks;
+        const right = results.rightHandLandmarks;
+        const pose = results.poseLandmarks;
+        const leftOpen = isOpenHand(left);
+        const rightOpen = isOpenHand(right);
+
+        if (leftOpen && rightOpen) return "hai bàn tay mở";
+        if (left && right) return "hai tay";
+        if (isHandRaised(left, pose) && isHandRaised(right, pose)) return "hai tay giơ cao";
+        if (isHandRaised(left, pose)) return "tay trái giơ cao";
+        if (isHandRaised(right, pose)) return "tay phải giơ cao";
+        if (isHandNearFace(left) || isHandNearFace(right)) return "tay gần mặt";
+        if (leftOpen) return "bàn tay trái mở";
+        if (rightOpen) return "bàn tay phải mở";
+        if (left) return "phát hiện tay trái";
+        if (right) return "phát hiện tay phải";
+        return "chưa rõ";
+      }
+
+      function isOpenHand(hand) {
+        if (!hand || hand.length < 21) return false;
+        const wrist = hand[0];
+        const tips = [8, 12, 16, 20].map((index) => hand[index]);
+        const mids = [6, 10, 14, 18].map((index) => hand[index]);
+        return tips.filter((tip, index) => tip.y < mids[index].y && distance(tip, wrist) > 0.12).length >= 3;
+      }
+
+      function isHandRaised(hand, pose) {
+        if (!hand || !pose || pose.length < 13) return false;
+        const wrist = hand[0];
+        const leftShoulder = pose[11];
+        const rightShoulder = pose[12];
+        const shoulderY = Math.min(leftShoulder.y, rightShoulder.y);
+        return wrist.y < shoulderY;
+      }
+
+      function isHandNearFace(hand) {
+        if (!hand || hand.length < 21) return false;
+        const wrist = hand[0];
+        const indexTip = hand[8];
+        return wrist.y < 0.42 || indexTip.y < 0.38;
+      }
+
+      function distance(a, b) {
+        return Math.hypot(a.x - b.x, a.y - b.y);
+      }
+
+      function translateDevLabel(label) {
+        const dictionary = {
+          "hai bàn tay mở": "Hai bàn tay đang mở.",
+          "hai tay": "Tôi thấy cả hai tay.",
+          "hai tay giơ cao": "Hai tay đang giơ cao.",
+          "tay trái giơ cao": "Tay trái đang giơ cao.",
+          "tay phải giơ cao": "Tay phải đang giơ cao.",
+          "tay gần mặt": "Tay đang ở gần mặt.",
+          "bàn tay trái mở": "Bàn tay trái đang mở.",
+          "bàn tay phải mở": "Bàn tay phải đang mở.",
+          "phát hiện tay trái": "Tôi thấy tay trái.",
+          "phát hiện tay phải": "Tôi thấy tay phải.",
+          "chưa rõ": "Chưa nhận ra cử chỉ.",
+        };
+        return dictionary[label] || "Chưa nhận ra cử chỉ.";
+      }
+
+      function resetTranscript() {
+        stableLabel = "chưa rõ";
+        stableCount = 0;
+        lastCommitted = "";
+        committed.length = 0;
+        liveLabel.textContent = "chưa rõ";
+        transcript.textContent = "Transcript thử nghiệm sẽ hiện ở đây.";
+        vietnameseOutput.textContent = "Chưa nhận ra cử chỉ.";
+      }
+    </script>
+  </body>
+</html>

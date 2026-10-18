@@ -1,0 +1,9 @@
+sample_id,gloss_sequence,vietnamese_text,split,signer_id,source_video
+tr_train_001,TOI,Tôi.,train,synthetic_a,
+tr_train_002,TOI UONG NUOC,Tôi uống nước.,train,synthetic_a,
+tr_train_003,CAM-ON,Cảm ơn.,train,synthetic_b,
+tr_train_004,TOI MUON NUOC,Tôi muốn uống nước.,train,synthetic_b,
+tr_train_005,TOI NGAY-MAI BENH-VIEN DI,Ngày mai tôi sẽ đi bệnh viện.,train,synthetic_c,
+tr_val_001,TOI UONG NUOC,Tôi uống nước.,validation,synthetic_d,
+tr_val_002,CAM-ON,Cảm ơn.,validation,synthetic_e,
+tr_val_003,TOI NGAY-MAI BENH-VIEN DI,Ngày mai tôi sẽ đi bệnh viện.,validation,synthetic_f,

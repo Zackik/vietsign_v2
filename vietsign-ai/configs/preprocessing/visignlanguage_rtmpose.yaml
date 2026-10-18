@@ -1,0 +1,45 @@
+dataset_config: configs/data/visignlanguage_video_split.yaml
+
+extractor:
+  type: rtmpose
+  hands: true
+  pose: true
+  face: false
+
+rtmpose:
+  runtime: rtmlib
+  mode: balanced
+  backend: onnxruntime
+  device: cpu
+  keypoint_threshold: 0.25
+  det_model: models/rtmpose/yolox_m_8xb8-300e_humanart-c2c7a14a.onnx
+  pose_model: models/rtmpose/rtmw-dw-x-l_simcc-cocktail14_270e-256x192_20231122.onnx
+
+video:
+  target_fps: 8
+  num_frames: 12
+  sampling: uniform
+
+normalization:
+  type: image
+
+interpolation:
+  enabled: true
+  max_gap: 2
+
+smoothing:
+  enabled: true
+  type: ema
+  alpha: 0.6
+
+features:
+  velocity: true
+  acceleration: false
+
+cache:
+  enabled: true
+  root: data/cache/keypoints/visignlanguage_rtmpose
+  reuse: true
+
+warnings:
+  hand_coverage_threshold: 0.2

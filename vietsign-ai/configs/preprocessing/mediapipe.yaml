@@ -1,0 +1,32 @@
+dataset_config: configs/data/vsl400.yaml
+
+extractor:
+  type: mediapipe
+  hands: true
+  pose: true
+  face: false
+
+video:
+  target_fps: 25
+  num_frames: 64
+  sampling: uniform
+
+normalization:
+  type: body_relative
+
+interpolation:
+  enabled: true
+  max_gap: 3
+
+features:
+  velocity: true
+  acceleration: false
+
+cache:
+  enabled: true
+  root: data/cache/keypoints
+  reuse: true
+
+warnings:
+  hand_coverage_threshold: 0.5
+

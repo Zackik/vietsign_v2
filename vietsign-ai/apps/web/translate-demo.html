@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VietSignAI Gloss Translation Demo</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #101418;
+        color: #f8fafc;
+      }
+      main {
+        width: min(920px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0;
+      }
+      textarea,
+      button,
+      select {
+        font: inherit;
+      }
+      textarea {
+        width: 100%;
+        min-height: 120px;
+        padding: 12px;
+        color: #f8fafc;
+        background: #171f2a;
+        border: 1px solid #344256;
+      }
+      button,
+      select {
+        min-height: 40px;
+        margin-top: 12px;
+        padding: 8px 12px;
+      }
+      .result {
+        margin-top: 16px;
+        padding: 16px;
+        background: #171f2a;
+        border: 1px solid #344256;
+      }
+      #translation {
+        font-size: clamp(26px, 5vw, 46px);
+        color: #5eead4;
+      }
+      pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        color: #a7b0bf;
+      }
+      .warn {
+        color: #fbbf24;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Gloss → Tiếng Việt</h1>
+      <p>Demo này dịch chuỗi gloss sang tiếng Việt bằng checkpoint text translation. Chưa phải webcam → VSL → tiếng Việt.</p>
+
+      <label for="gloss">Nhập gloss</label>
+      <textarea id="gloss">BẠN TÊN GÌ ?</textarea>
+      <br />
+      <select id="examples">
+        <option value="BẠN TÊN GÌ ?">BẠN TÊN GÌ ?</option>
+        <option value="TÔI TUỔI 19 .">TÔI TUỔI 19 .</option>
+        <option value="TÔI ĐĂNG-KÝ KHÁM SỨC-KHỎE MUỐN">TÔI ĐĂNG-KÝ KHÁM SỨC-KHỎE MUỐN</option>
+      </select>
+      <button id="translate">Dịch sang tiếng Việt</button>
+
+      <section class="result">
+        <h2>Kết quả</h2>
+        <div id="translation">Chưa dịch</div>
+        <p id="status" class="warn">API cần chạy ở http://127.0.0.1:8000</p>
+        <pre id="raw"></pre>
+      </section>
+    </main>
+
+    <script>
+      const apiBase = "http://127.0.0.1:8000";
+      const gloss = document.getElementById("gloss");
+      const examples = document.getElementById("examples");
+      const translation = document.getElementById("translation");
+      const status = document.getElementById("status");
+      const raw = document.getElementById("raw");
+
+      examples.addEventListener("change", () => {
+        gloss.value = examples.value;
+      });
+
+      document.getElementById("translate").addEventListener("click", async () => {
+        status.textContent = "Đang dịch...";
+        translation.textContent = "";
+        raw.textContent = "";
+        try {
+          const response = await fetch(`${apiBase}/translate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              gloss: gloss.value,
+              model: "parallel_vie_vsl_translator",
+            }),
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(JSON.stringify(data, null, 2));
+          }
+          translation.textContent = data.translation || "(rỗng)";
+          status.textContent = `Model: ${data.model?.name || "unknown"} | ${Math.round(data.processing?.total_ms || 0)} ms`;
+          raw.textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+          translation.textContent = "Lỗi";
+          status.textContent = String(error);
+        }
+      });
+    </script>
+  </body>
+</html>

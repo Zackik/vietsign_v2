@@ -1,0 +1,42 @@
+seed: 42
+
+data:
+  root_dir: data
+  raw_dir: data/raw
+  processed_dir: data/processed
+  train_manifest: data/train.csv
+  val_manifest: data/val.csv
+  test_manifest: data/test.csv
+
+preprocessing:
+  frame_rate: 25
+  image_size: [224, 224]
+  max_frames: 256
+  normalize: true
+
+features:
+  use_pose: true
+  use_rgb: true
+  pose_backend: mediapipe
+  rgb_backend: none
+
+model:
+  name: baseline_temporal
+  num_classes: null
+  hidden_size: 256
+  dropout: 0.2
+
+training:
+  batch_size: 8
+  epochs: 20
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  num_workers: 2
+  checkpoint_dir: outputs/checkpoints
+  log_interval: 20
+
+device:
+  preference: auto
+  allow_mps: true
+  allow_cuda: true
+

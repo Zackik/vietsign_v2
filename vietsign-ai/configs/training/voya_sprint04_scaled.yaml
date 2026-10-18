@@ -1,0 +1,88 @@
+seed: 42
+
+run:
+  name: sprint04
+  output_dir: outputs/real_experiments/voya_direct/sprint04
+
+data:
+  dataset: VOYA_VSL
+  root: data/raw/voya_vsl_probe
+  representation: native_1605
+  canonical_mapping: false
+  real_data: true
+  signer_independent: false
+  cache_size: 10
+
+experiment:
+  class_count: 10
+  minimum_samples_per_class: 60
+  max_samples_per_class: 60
+  class_selection: top_n_by_sample_count_then_label_id
+  selection_uses_test_performance: false
+
+split:
+  type: sample_stratified
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+  signer_independent: false
+
+audit:
+  near_duplicate_samples: 300
+
+model:
+  input_dim: 1605
+  d_model: 64
+  num_layers: 1
+  num_heads: 4
+  dropout: 0.1
+
+training:
+  epochs: 1
+  batch_size: 32
+  learning_rate: 0.0005
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  device: auto
+
+baseline:
+  hidden_dim: 64
+
+variants:
+  - name: transformer_normal
+    model: transformer
+    view: sequence
+    epochs: 1
+    normalization: zscore
+    save_checkpoint: true
+  - name: mean_pool_mlp
+    model: mean_mlp
+    view: sequence
+    epochs: 1
+    normalization: zscore
+    save_checkpoint: true
+  - name: single_frame_mlp
+    model: single_frame_mlp
+    view: single_middle_frame
+    epochs: 1
+    normalization: zscore
+    save_checkpoint: true
+  - name: transformer_temporal_shuffle
+    model: transformer
+    view: temporal_shuffle
+    epochs: 1
+    normalization: zscore
+    save_checkpoint: true
+  - name: transformer_no_normalization
+    model: transformer
+    view: sequence
+    epochs: 1
+    normalization: none
+    save_checkpoint: true
+  - name: label_shuffle_negative_control
+    model: transformer
+    view: sequence
+    epochs: 1
+    normalization: zscore
+    label_shuffle: true
+    save_checkpoint: false

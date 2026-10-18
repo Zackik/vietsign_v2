@@ -1,0 +1,401 @@
+sample_id,video_path,label,label_id,signer_id,split,dataset,camera,duration,fps,frame_count,width,height
+131244,data/raw/visignlanguage_video/dataset/train/An ủi/131244.mp4,An ủi,0,,train,ViSignLanguage-Video,,1.499,20.01,30,224,224
+198246_1,data/raw/visignlanguage_video/dataset/train/An ủi/198246_1.mp4,An ủi,0,,train,ViSignLanguage-Video,,1.566,19.16,30,224,224
+329258,data/raw/visignlanguage_video/dataset/train/An ủi/329258.mp4,An ủi,0,,train,ViSignLanguage-Video,,1.532,19.58,30,224,224
+500156_3,data/raw/visignlanguage_video/dataset/train/Ban ngày/500156_3.mp4,Ban ngày,1,,train,ViSignLanguage-Video,,3.188,9.41,30,224,224
+680099,data/raw/visignlanguage_video/dataset/train/Ban ngày/680099.mp4,Ban ngày,1,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+855731_1,data/raw/visignlanguage_video/dataset/train/Ban ngày/855731_1.mp4,Ban ngày,1,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+379786,data/raw/visignlanguage_video/dataset/train/Ban đêm/379786.mp4,Ban đêm,2,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+814825_1,data/raw/visignlanguage_video/dataset/train/Ban đêm/814825_1.mp4,Ban đêm,2,,train,ViSignLanguage-Video,,2.346,12.79,30,224,224
+887352,data/raw/visignlanguage_video/dataset/train/Ban đêm/887352.mp4,Ban đêm,2,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+102260,data/raw/visignlanguage_video/dataset/train/Biết/102260.mp4,Biết,3,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+378085_1,data/raw/visignlanguage_video/dataset/train/Biết/378085_1.mp4,Biết,3,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+497382,data/raw/visignlanguage_video/dataset/train/Biết/497382.mp4,Biết,3,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+159642,data/raw/visignlanguage_video/dataset/train/Biếu tặng/159642.mp4,Biếu tặng,4,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+299122,data/raw/visignlanguage_video/dataset/train/Biếu tặng/299122.mp4,Biếu tặng,4,,train,ViSignLanguage-Video,,2.266,13.24,30,224,224
+871476,data/raw/visignlanguage_video/dataset/train/Biếu tặng/871476.mp4,Biếu tặng,4,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+456699,data/raw/visignlanguage_video/dataset/train/Bàn tay/456699.mp4,Bàn tay,5,,train,ViSignLanguage-Video,,2.467,12.16,30,224,224
+456699_3,data/raw/visignlanguage_video/dataset/train/Bàn tay/456699_3.mp4,Bàn tay,5,,train,ViSignLanguage-Video,,2.467,12.16,30,224,224
+555884,data/raw/visignlanguage_video/dataset/train/Bàn tay/555884.mp4,Bàn tay,5,,train,ViSignLanguage-Video,,2.634,11.39,30,224,224
+211579,data/raw/visignlanguage_video/dataset/train/Băn khoăn/211579.mp4,Băn khoăn,6,,train,ViSignLanguage-Video,,1.552,19.33,30,224,224
+665579_1,data/raw/visignlanguage_video/dataset/train/Băn khoăn/665579_1.mp4,Băn khoăn,6,,train,ViSignLanguage-Video,,1.599,18.76,30,224,224
+755674,data/raw/visignlanguage_video/dataset/train/Băn khoăn/755674.mp4,Băn khoăn,6,,train,ViSignLanguage-Video,,1.502,19.97,30,224,224
+273148,data/raw/visignlanguage_video/dataset/train/Bạn thân/273148.mp4,Bạn thân,7,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+598369_1,data/raw/visignlanguage_video/dataset/train/Bạn thân/598369_1.mp4,Bạn thân,7,,train,ViSignLanguage-Video,,2.232,13.44,30,224,224
+897549,data/raw/visignlanguage_video/dataset/train/Bạn thân/897549.mp4,Bạn thân,7,,train,ViSignLanguage-Video,,2.698,11.12,30,224,224
+226882,data/raw/visignlanguage_video/dataset/train/Bế mạc/226882.mp4,Bế mạc,8,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+573417,data/raw/visignlanguage_video/dataset/train/Bế mạc/573417.mp4,Bế mạc,8,,train,ViSignLanguage-Video,,3.297,9.1,30,224,224
+680828_1,data/raw/visignlanguage_video/dataset/train/Bế mạc/680828_1.mp4,Bế mạc,8,,train,ViSignLanguage-Video,,2.199,13.64,30,224,224
+107540,data/raw/visignlanguage_video/dataset/train/Bệnh nhân/107540.mp4,Bệnh nhân,9,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+174441,data/raw/visignlanguage_video/dataset/train/Bệnh nhân/174441.mp4,Bệnh nhân,9,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+761759,data/raw/visignlanguage_video/dataset/train/Bệnh nhân/761759.mp4,Bệnh nhân,9,,train,ViSignLanguage-Video,,2.498,12.01,30,224,224
+132938,data/raw/visignlanguage_video/dataset/train/Bệnh viện/132938.mp4,Bệnh viện,10,,train,ViSignLanguage-Video,,3.846,7.8,30,224,224
+531071,data/raw/visignlanguage_video/dataset/train/Bệnh viện/531071.mp4,Bệnh viện,10,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+785197,data/raw/visignlanguage_video/dataset/train/Bệnh viện/785197.mp4,Bệnh viện,10,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+358175,data/raw/visignlanguage_video/dataset/train/Bộ y tế/358175.mp4,Bộ y tế,11,,train,ViSignLanguage-Video,,3.963,7.57,30,224,224
+358175_1,data/raw/visignlanguage_video/dataset/train/Bộ y tế/358175_1.mp4,Bộ y tế,11,,train,ViSignLanguage-Video,,3.963,7.57,30,224,224
+723398,data/raw/visignlanguage_video/dataset/train/Bộ y tế/723398.mp4,Bộ y tế,11,,train,ViSignLanguage-Video,,3.963,7.57,30,224,224
+345884,data/raw/visignlanguage_video/dataset/train/Chiều/345884.mp4,Chiều,12,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+578634_1,data/raw/visignlanguage_video/dataset/train/Chiều/578634_1.mp4,Chiều,12,,train,ViSignLanguage-Video,,2.65,11.32,30,224,224
+742412,data/raw/visignlanguage_video/dataset/train/Chiều/742412.mp4,Chiều,12,,train,ViSignLanguage-Video,,1.706,17.58,30,224,224
+446954,data/raw/visignlanguage_video/dataset/train/Cho/446954.mp4,Cho,13,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+907189,data/raw/visignlanguage_video/dataset/train/Cho/907189.mp4,Cho,13,,train,ViSignLanguage-Video,,2.498,12.01,30,224,224
+973349_2,data/raw/visignlanguage_video/dataset/train/Cho/973349_2.mp4,Cho,13,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+172792,data/raw/visignlanguage_video/dataset/train/Chào/172792.mp4,Chào,14,,train,ViSignLanguage-Video,,2.634,11.39,30,224,224
+338651_1,data/raw/visignlanguage_video/dataset/train/Chào/338651_1.mp4,Chào,14,,train,ViSignLanguage-Video,,2.066,14.52,30,224,224
+792094,data/raw/visignlanguage_video/dataset/train/Chào/792094.mp4,Chào,14,,train,ViSignLanguage-Video,,2.534,11.84,30,224,224
+519093,data/raw/visignlanguage_video/dataset/train/Chân/519093.mp4,Chân,15,,train,ViSignLanguage-Video,,2.584,11.61,30,224,224
+863934,data/raw/visignlanguage_video/dataset/train/Chân/863934.mp4,Chân,15,,train,ViSignLanguage-Video,,2.261,13.27,30,224,224
+872840,data/raw/visignlanguage_video/dataset/train/Chân/872840.mp4,Chân,15,,train,ViSignLanguage-Video,,2.732,10.98,30,224,224
+331251,data/raw/visignlanguage_video/dataset/train/Chúng ta/331251.mp4,Chúng ta,16,,train,ViSignLanguage-Video,,2.534,11.84,30,224,224
+539375,data/raw/visignlanguage_video/dataset/train/Chúng ta/539375.mp4,Chúng ta,16,,train,ViSignLanguage-Video,,3.272,9.17,30,224,224
+611945,data/raw/visignlanguage_video/dataset/train/Chúng ta/611945.mp4,Chúng ta,16,,train,ViSignLanguage-Video,,2.732,10.98,30,224,224
+521947,data/raw/visignlanguage_video/dataset/train/Chạy/521947.mp4,Chạy,17,,train,ViSignLanguage-Video,,2.453,12.23,30,224,224
+674553,data/raw/visignlanguage_video/dataset/train/Chạy/674553.mp4,Chạy,17,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+749342,data/raw/visignlanguage_video/dataset/train/Chạy/749342.mp4,Chạy,17,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+230679,data/raw/visignlanguage_video/dataset/train/Chấp nhận/230679.mp4,Chấp nhận,18,,train,ViSignLanguage-Video,,1.652,18.16,30,224,224
+414910,data/raw/visignlanguage_video/dataset/train/Chấp nhận/414910.mp4,Chấp nhận,18,,train,ViSignLanguage-Video,,1.652,18.16,30,224,224
+854717,data/raw/visignlanguage_video/dataset/train/Chấp nhận/854717.mp4,Chấp nhận,18,,train,ViSignLanguage-Video,,2.252,13.32,30,224,224
+346277,data/raw/visignlanguage_video/dataset/train/Chậm lại/346277.mp4,Chậm lại,19,,train,ViSignLanguage-Video,,2.573,11.66,30,224,224
+643118_1,data/raw/visignlanguage_video/dataset/train/Chậm lại/643118_1.mp4,Chậm lại,19,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+830180,data/raw/visignlanguage_video/dataset/train/Chậm lại/830180.mp4,Chậm lại,19,,train,ViSignLanguage-Video,,2.486,12.07,30,224,224
+372793,data/raw/visignlanguage_video/dataset/train/Con gấu/372793.mp4,Con gấu,20,,train,ViSignLanguage-Video,,2.23,13.45,30,224,224
+497542,data/raw/visignlanguage_video/dataset/train/Con gấu/497542.mp4,Con gấu,20,,train,ViSignLanguage-Video,,1.733,17.31,30,224,224
+523956_1,data/raw/visignlanguage_video/dataset/train/Con gấu/523956_1.mp4,Con gấu,20,,train,ViSignLanguage-Video,,2.595,11.56,30,224,224
+690341,data/raw/visignlanguage_video/dataset/train/Cá/690341.mp4,Cá,21,,train,ViSignLanguage-Video,,2.423,12.38,30,224,224
+751332_2,data/raw/visignlanguage_video/dataset/train/Cá/751332_2.mp4,Cá,21,,train,ViSignLanguage-Video,,2.196,13.66,30,224,224
+974244_1,data/raw/visignlanguage_video/dataset/train/Cá/974244_1.mp4,Cá,21,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+654634,data/raw/visignlanguage_video/dataset/train/Cách ly/654634.mp4,Cách ly,22,,train,ViSignLanguage-Video,,2.571,11.67,30,224,224
+741390,data/raw/visignlanguage_video/dataset/train/Cách ly/741390.mp4,Cách ly,22,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+946305,data/raw/visignlanguage_video/dataset/train/Cách ly/946305.mp4,Cách ly,22,,train,ViSignLanguage-Video,,3.713,8.08,30,224,224
+208618,data/raw/visignlanguage_video/dataset/train/Cám dỗ/208618.mp4,Cám dỗ,23,,train,ViSignLanguage-Video,,1.552,19.33,30,224,224
+395442,data/raw/visignlanguage_video/dataset/train/Cám dỗ/395442.mp4,Cám dỗ,23,,train,ViSignLanguage-Video,,1.566,19.16,30,224,224
+768061,data/raw/visignlanguage_video/dataset/train/Cám dỗ/768061.mp4,Cám dỗ,23,,train,ViSignLanguage-Video,,1.666,18.01,30,224,224
+593152,data/raw/visignlanguage_video/dataset/train/Có thể/593152.mp4,Có thể,24,,train,ViSignLanguage-Video,,3.055,9.82,30,224,224
+975467_1,data/raw/visignlanguage_video/dataset/train/Có thể/975467_1.mp4,Có thể,24,,train,ViSignLanguage-Video,,2.757,10.88,30,224,224
+975467_3,data/raw/visignlanguage_video/dataset/train/Có thể/975467_3.mp4,Có thể,24,,train,ViSignLanguage-Video,,2.757,10.88,30,224,224
+132537,data/raw/visignlanguage_video/dataset/train/Cơ thể/132537.mp4,Cơ thể,25,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+142213_1,data/raw/visignlanguage_video/dataset/train/Cơ thể/142213_1.mp4,Cơ thể,25,,train,ViSignLanguage-Video,,2.463,12.18,30,224,224
+890870,data/raw/visignlanguage_video/dataset/train/Cơ thể/890870.mp4,Cơ thể,25,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+320281,data/raw/visignlanguage_video/dataset/train/Cảm ơn/320281.mp4,Cảm ơn,26,,train,ViSignLanguage-Video,,2.331,12.87,30,224,224
+934794,data/raw/visignlanguage_video/dataset/train/Cảm ơn/934794.mp4,Cảm ơn,26,,train,ViSignLanguage-Video,,2.331,12.87,30,224,224
+975136,data/raw/visignlanguage_video/dataset/train/Cảm ơn/975136.mp4,Cảm ơn,26,,train,ViSignLanguage-Video,,2.443,12.28,30,224,224
+217308,data/raw/visignlanguage_video/dataset/train/Cần/217308.mp4,Cần,27,,train,ViSignLanguage-Video,,2.333,12.86,30,224,224
+256294,data/raw/visignlanguage_video/dataset/train/Cần/256294.mp4,Cần,27,,train,ViSignLanguage-Video,,2.498,12.01,30,224,224
+824586_1,data/raw/visignlanguage_video/dataset/train/Cần/824586_1.mp4,Cần,27,,train,ViSignLanguage-Video,,2.498,12.01,30,224,224
+703766_2,data/raw/visignlanguage_video/dataset/train/Cứu/703766_2.mp4,Cứu,28,,train,ViSignLanguage-Video,,2.534,11.84,30,224,224
+735324_1,data/raw/visignlanguage_video/dataset/train/Cứu/735324_1.mp4,Cứu,28,,train,ViSignLanguage-Video,,2.519,11.91,30,224,224
+853252,data/raw/visignlanguage_video/dataset/train/Cứu/853252.mp4,Cứu,28,,train,ViSignLanguage-Video,,2.609,11.5,30,224,224
+729577_1,data/raw/visignlanguage_video/dataset/train/Dạy dỗ/729577_1.mp4,Dạy dỗ,29,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+920652,data/raw/visignlanguage_video/dataset/train/Dạy dỗ/920652.mp4,Dạy dỗ,29,,train,ViSignLanguage-Video,,3.264,9.19,30,224,224
+970917,data/raw/visignlanguage_video/dataset/train/Dạy dỗ/970917.mp4,Dạy dỗ,29,,train,ViSignLanguage-Video,,1.502,19.97,30,224,224
+260422,data/raw/visignlanguage_video/dataset/train/Dễ/260422.mp4,Dễ,30,,train,ViSignLanguage-Video,,2.211,13.57,30,224,224
+284692,data/raw/visignlanguage_video/dataset/train/Dễ/284692.mp4,Dễ,30,,train,ViSignLanguage-Video,,2.868,10.46,30,224,224
+383201,data/raw/visignlanguage_video/dataset/train/Dễ/383201.mp4,Dễ,30,,train,ViSignLanguage-Video,,2.011,14.92,30,224,224
+393243_1,data/raw/visignlanguage_video/dataset/train/Ghét/393243_1.mp4,Ghét,31,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+452737,data/raw/visignlanguage_video/dataset/train/Ghét/452737.mp4,Ghét,31,,train,ViSignLanguage-Video,,1.532,19.58,30,224,224
+835244,data/raw/visignlanguage_video/dataset/train/Ghét/835244.mp4,Ghét,31,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+197573,data/raw/visignlanguage_video/dataset/train/Giúp/197573.mp4,Giúp,32,,train,ViSignLanguage-Video,,1.632,18.38,30,224,224
+709805,data/raw/visignlanguage_video/dataset/train/Giúp/709805.mp4,Giúp,32,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+709805_2,data/raw/visignlanguage_video/dataset/train/Giúp/709805_2.mp4,Giúp,32,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+114835,data/raw/visignlanguage_video/dataset/train/Ho/114835.mp4,Ho,33,,train,ViSignLanguage-Video,,2.171,13.82,30,224,224
+114835_1,data/raw/visignlanguage_video/dataset/train/Ho/114835_1.mp4,Ho,33,,train,ViSignLanguage-Video,,2.171,13.82,30,224,224
+338533,data/raw/visignlanguage_video/dataset/train/Ho/338533.mp4,Ho,33,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+264686,data/raw/visignlanguage_video/dataset/train/Hy sinh/264686.mp4,Hy sinh,34,,train,ViSignLanguage-Video,,3.297,9.1,30,224,224
+321275,data/raw/visignlanguage_video/dataset/train/Hy sinh/321275.mp4,Hy sinh,34,,train,ViSignLanguage-Video,,3.264,9.19,30,224,224
+822858,data/raw/visignlanguage_video/dataset/train/Hy sinh/822858.mp4,Hy sinh,34,,train,ViSignLanguage-Video,,2.997,10.01,30,224,224
+301939,data/raw/visignlanguage_video/dataset/train/Hâm mộ/301939.mp4,Hâm mộ,35,,train,ViSignLanguage-Video,,2.266,13.24,30,224,224
+575786,data/raw/visignlanguage_video/dataset/train/Hâm mộ/575786.mp4,Hâm mộ,35,,train,ViSignLanguage-Video,,3.932,7.63,30,224,224
+823688,data/raw/visignlanguage_video/dataset/train/Hâm mộ/823688.mp4,Hâm mộ,35,,train,ViSignLanguage-Video,,2.266,13.24,30,224,224
+701949_3,data/raw/visignlanguage_video/dataset/train/Hôm nay/701949_3.mp4,Hôm nay,36,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+831295,data/raw/visignlanguage_video/dataset/train/Hôm nay/831295.mp4,Hôm nay,36,,train,ViSignLanguage-Video,,2.101,14.28,30,224,224
+889359,data/raw/visignlanguage_video/dataset/train/Hôm nay/889359.mp4,Hôm nay,36,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+189318,data/raw/visignlanguage_video/dataset/train/Họ/189318.mp4,Họ,37,,train,ViSignLanguage-Video,,2.5,12.0,30,224,224
+690180,data/raw/visignlanguage_video/dataset/train/Họ/690180.mp4,Họ,37,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+705050,data/raw/visignlanguage_video/dataset/train/Họ/705050.mp4,Họ,37,,train,ViSignLanguage-Video,,2.283,13.14,30,224,224
+498855,data/raw/visignlanguage_video/dataset/train/Học sinh/498855.mp4,Học sinh,38,,train,ViSignLanguage-Video,,2.814,10.66,30,224,224
+564226,data/raw/visignlanguage_video/dataset/train/Học sinh/564226.mp4,Học sinh,38,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+647957,data/raw/visignlanguage_video/dataset/train/Học sinh/647957.mp4,Học sinh,38,,train,ViSignLanguage-Video,,3.236,9.27,30,224,224
+703139,data/raw/visignlanguage_video/dataset/train/Khai báo/703139.mp4,Khai báo,39,,train,ViSignLanguage-Video,,1.499,20.01,30,224,224
+901909,data/raw/visignlanguage_video/dataset/train/Khai báo/901909.mp4,Khai báo,39,,train,ViSignLanguage-Video,,2.538,11.82,30,224,224
+901909_3,data/raw/visignlanguage_video/dataset/train/Khai báo/901909_3.mp4,Khai báo,39,,train,ViSignLanguage-Video,,2.538,11.82,30,224,224
+479353,data/raw/visignlanguage_video/dataset/train/Khu cách ly/479353.mp4,Khu cách ly,40,,train,ViSignLanguage-Video,,1.433,20.93,30,224,224
+563513_1,data/raw/visignlanguage_video/dataset/train/Khu cách ly/563513_1.mp4,Khu cách ly,40,,train,ViSignLanguage-Video,,1.599,18.76,30,224,224
+563513_2,data/raw/visignlanguage_video/dataset/train/Khu cách ly/563513_2.mp4,Khu cách ly,40,,train,ViSignLanguage-Video,,1.599,18.76,30,224,224
+533321_1,data/raw/visignlanguage_video/dataset/train/Khóc/533321_1.mp4,Khóc,41,,train,ViSignLanguage-Video,,35.294,0.85,30,224,224
+533321_2,data/raw/visignlanguage_video/dataset/train/Khóc/533321_2.mp4,Khóc,41,,train,ViSignLanguage-Video,,35.294,0.85,30,224,224
+789606,data/raw/visignlanguage_video/dataset/train/Khóc/789606.mp4,Khóc,41,,train,ViSignLanguage-Video,,32.609,0.92,30,224,224
+593355,data/raw/visignlanguage_video/dataset/train/Khẩu trang/593355.mp4,Khẩu trang,42,,train,ViSignLanguage-Video,,2.398,12.51,30,224,224
+644173,data/raw/visignlanguage_video/dataset/train/Khẩu trang/644173.mp4,Khẩu trang,42,,train,ViSignLanguage-Video,,3.165,9.48,30,224,224
+783157_3,data/raw/visignlanguage_video/dataset/train/Khẩu trang/783157_3.mp4,Khẩu trang,42,,train,ViSignLanguage-Video,,3.132,9.58,30,224,224
+162535,data/raw/visignlanguage_video/dataset/train/Kết hôn/162535.mp4,Kết hôn,43,,train,ViSignLanguage-Video,,2.95,10.17,30,224,224
+671015_2,data/raw/visignlanguage_video/dataset/train/Kết hôn/671015_2.mp4,Kết hôn,43,,train,ViSignLanguage-Video,,2.398,12.51,30,224,224
+966785,data/raw/visignlanguage_video/dataset/train/Kết hôn/966785.mp4,Kết hôn,43,,train,ViSignLanguage-Video,,2.166,13.85,30,224,224
+578975,data/raw/visignlanguage_video/dataset/train/Lo lắng/578975.mp4,Lo lắng,44,,train,ViSignLanguage-Video,,2.379,12.61,30,224,224
+578975_2,data/raw/visignlanguage_video/dataset/train/Lo lắng/578975_2.mp4,Lo lắng,44,,train,ViSignLanguage-Video,,2.379,12.61,30,224,224
+605937,data/raw/visignlanguage_video/dataset/train/Lo lắng/605937.mp4,Lo lắng,44,,train,ViSignLanguage-Video,,2.423,12.38,30,224,224
+559398,data/raw/visignlanguage_video/dataset/train/Lây bệnh/559398.mp4,Lây bệnh,45,,train,ViSignLanguage-Video,,1.433,20.93,30,224,224
+738448,data/raw/visignlanguage_video/dataset/train/Lây bệnh/738448.mp4,Lây bệnh,45,,train,ViSignLanguage-Video,,3.304,9.08,30,224,224
+760626,data/raw/visignlanguage_video/dataset/train/Lây bệnh/760626.mp4,Lây bệnh,45,,train,ViSignLanguage-Video,,3.205,9.36,30,224,224
+138817,data/raw/visignlanguage_video/dataset/train/Mua/138817.mp4,Mua,46,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+297816,data/raw/visignlanguage_video/dataset/train/Mua/297816.mp4,Mua,46,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+433632_3,data/raw/visignlanguage_video/dataset/train/Mua/433632_3.mp4,Mua,46,,train,ViSignLanguage-Video,,1.961,15.3,30,224,224
+173201_1,data/raw/visignlanguage_video/dataset/train/Mời vào/173201_1.mp4,Mời vào,47,,train,ViSignLanguage-Video,,2.421,12.39,30,224,224
+448588,data/raw/visignlanguage_video/dataset/train/Mời vào/448588.mp4,Mời vào,47,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+607868_3,data/raw/visignlanguage_video/dataset/train/Mời vào/607868_3.mp4,Mời vào,47,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+130353,data/raw/visignlanguage_video/dataset/train/Nghe/130353.mp4,Nghe,48,,train,ViSignLanguage-Video,,2.344,12.8,30,224,224
+288803,data/raw/visignlanguage_video/dataset/train/Nghe/288803.mp4,Nghe,48,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+897305,data/raw/visignlanguage_video/dataset/train/Nghe/897305.mp4,Nghe,48,,train,ViSignLanguage-Video,,2.445,12.27,30,224,224
+108491,data/raw/visignlanguage_video/dataset/train/Nghỉ ngơi/108491.mp4,Nghỉ ngơi,49,,train,ViSignLanguage-Video,,2.313,12.97,30,224,224
+108491_3,data/raw/visignlanguage_video/dataset/train/Nghỉ ngơi/108491_3.mp4,Nghỉ ngơi,49,,train,ViSignLanguage-Video,,2.313,12.97,30,224,224
+123005,data/raw/visignlanguage_video/dataset/train/Nghỉ ngơi/123005.mp4,Nghỉ ngơi,49,,train,ViSignLanguage-Video,,2.212,13.56,30,224,224
+151426,data/raw/visignlanguage_video/dataset/train/Ngón tay/151426.mp4,Ngón tay,50,,train,ViSignLanguage-Video,,2.657,11.29,30,224,224
+880841_1,data/raw/visignlanguage_video/dataset/train/Ngón tay/880841_1.mp4,Ngón tay,50,,train,ViSignLanguage-Video,,3.188,9.41,30,224,224
+881369,data/raw/visignlanguage_video/dataset/train/Ngón tay/881369.mp4,Ngón tay,50,,train,ViSignLanguage-Video,,3.432,8.74,30,224,224
+423939_3,data/raw/visignlanguage_video/dataset/train/Nhà/423939_3.mp4,Nhà,51,,train,ViSignLanguage-Video,,2.613,11.48,30,224,224
+751051,data/raw/visignlanguage_video/dataset/train/Nhà/751051.mp4,Nhà,51,,train,ViSignLanguage-Video,,2.91,10.31,30,224,224
+758765,data/raw/visignlanguage_video/dataset/train/Nhà/758765.mp4,Nhà,51,,train,ViSignLanguage-Video,,2.128,14.1,30,224,224
+455168,data/raw/visignlanguage_video/dataset/train/Nhìn/455168.mp4,Nhìn,52,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+483542,data/raw/visignlanguage_video/dataset/train/Nhìn/483542.mp4,Nhìn,52,,train,ViSignLanguage-Video,,2.214,13.55,30,224,224
+943298,data/raw/visignlanguage_video/dataset/train/Nhìn/943298.mp4,Nhìn,52,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+409478_2,data/raw/visignlanguage_video/dataset/train/Nhầm/409478_2.mp4,Nhầm,53,,train,ViSignLanguage-Video,,2.93,10.24,30,224,224
+882824,data/raw/visignlanguage_video/dataset/train/Nhầm/882824.mp4,Nhầm,53,,train,ViSignLanguage-Video,,2.295,13.07,30,224,224
+945664,data/raw/visignlanguage_video/dataset/train/Nhầm/945664.mp4,Nhầm,53,,train,ViSignLanguage-Video,,2.863,10.48,30,224,224
+139019,data/raw/visignlanguage_video/dataset/train/Nhớ/139019.mp4,Nhớ,54,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+528129,data/raw/visignlanguage_video/dataset/train/Nhớ/528129.mp4,Nhớ,54,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+878325,data/raw/visignlanguage_video/dataset/train/Nhớ/878325.mp4,Nhớ,54,,train,ViSignLanguage-Video,,2.379,12.61,30,224,224
+163491,data/raw/visignlanguage_video/dataset/train/Nói/163491.mp4,Nói,55,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+327823,data/raw/visignlanguage_video/dataset/train/Nói/327823.mp4,Nói,55,,train,ViSignLanguage-Video,,2.664,11.26,30,224,224
+776149,data/raw/visignlanguage_video/dataset/train/Nói/776149.mp4,Nói,55,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+315173,data/raw/visignlanguage_video/dataset/train/Nói xấu/315173.mp4,Nói xấu,56,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+389282_2,data/raw/visignlanguage_video/dataset/train/Nói xấu/389282_2.mp4,Nói xấu,56,,train,ViSignLanguage-Video,,1.703,17.62,30,224,224
+576805_1,data/raw/visignlanguage_video/dataset/train/Nói xấu/576805_1.mp4,Nói xấu,56,,train,ViSignLanguage-Video,,2.481,12.09,30,224,224
+116547,data/raw/visignlanguage_video/dataset/train/Nôn ói/116547.mp4,Nôn ói,57,,train,ViSignLanguage-Video,,3.155,9.51,30,224,224
+219169,data/raw/visignlanguage_video/dataset/train/Nôn ói/219169.mp4,Nôn ói,57,,train,ViSignLanguage-Video,,2.498,12.01,30,224,224
+926730,data/raw/visignlanguage_video/dataset/train/Nôn ói/926730.mp4,Nôn ói,57,,train,ViSignLanguage-Video,,1.433,20.93,30,224,224
+579123,data/raw/visignlanguage_video/dataset/train/Nặng/579123.mp4,Nặng,58,,train,ViSignLanguage-Video,,2.313,12.97,30,224,224
+781403_1,data/raw/visignlanguage_video/dataset/train/Nặng/781403_1.mp4,Nặng,58,,train,ViSignLanguage-Video,,2.234,13.43,30,224,224
+786587,data/raw/visignlanguage_video/dataset/train/Nặng/786587.mp4,Nặng,58,,train,ViSignLanguage-Video,,2.232,13.44,30,224,224
+153945_1,data/raw/visignlanguage_video/dataset/train/Phía sau/153945_1.mp4,Phía sau,59,,train,ViSignLanguage-Video,,1.778,16.87,30,224,224
+367271,data/raw/visignlanguage_video/dataset/train/Phía sau/367271.mp4,Phía sau,59,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+820184,data/raw/visignlanguage_video/dataset/train/Phía sau/820184.mp4,Phía sau,59,,train,ViSignLanguage-Video,,3.036,9.88,30,224,224
+203996,data/raw/visignlanguage_video/dataset/train/Phạt/203996.mp4,Phạt,60,,train,ViSignLanguage-Video,,1.602,18.73,30,224,224
+339592,data/raw/visignlanguage_video/dataset/train/Phạt/339592.mp4,Phạt,60,,train,ViSignLanguage-Video,,1.599,18.76,30,224,224
+835869,data/raw/visignlanguage_video/dataset/train/Phạt/835869.mp4,Phạt,60,,train,ViSignLanguage-Video,,1.489,20.15,30,224,224
+220465,data/raw/visignlanguage_video/dataset/train/Phỏng vấn/220465.mp4,Phỏng vấn,61,,train,ViSignLanguage-Video,,1.401,21.41,30,224,224
+549956,data/raw/visignlanguage_video/dataset/train/Phỏng vấn/549956.mp4,Phỏng vấn,61,,train,ViSignLanguage-Video,,2.351,12.76,30,224,224
+683783,data/raw/visignlanguage_video/dataset/train/Phỏng vấn/683783.mp4,Phỏng vấn,61,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+250210,data/raw/visignlanguage_video/dataset/train/Phục hồi/250210.mp4,Phục hồi,62,,train,ViSignLanguage-Video,,6.55,4.58,30,224,224
+290217,data/raw/visignlanguage_video/dataset/train/Phục hồi/290217.mp4,Phục hồi,62,,train,ViSignLanguage-Video,,5.639,5.32,30,224,224
+468074,data/raw/visignlanguage_video/dataset/train/Phục hồi/468074.mp4,Phục hồi,62,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+564637,data/raw/visignlanguage_video/dataset/train/Rau/564637.mp4,Rau,63,,train,ViSignLanguage-Video,,2.099,14.29,30,224,224
+637234,data/raw/visignlanguage_video/dataset/train/Rau/637234.mp4,Rau,63,,train,ViSignLanguage-Video,,2.634,11.39,30,224,224
+794093_2,data/raw/visignlanguage_video/dataset/train/Rau/794093_2.mp4,Rau,63,,train,ViSignLanguage-Video,,2.344,12.8,30,224,224
+331230,data/raw/visignlanguage_video/dataset/train/Rẽ phải/331230.mp4,Rẽ phải,64,,train,ViSignLanguage-Video,,2.671,11.23,30,224,224
+423401,data/raw/visignlanguage_video/dataset/train/Rẽ phải/423401.mp4,Rẽ phải,64,,train,ViSignLanguage-Video,,3.264,9.19,30,224,224
+652530,data/raw/visignlanguage_video/dataset/train/Rẽ phải/652530.mp4,Rẽ phải,64,,train,ViSignLanguage-Video,,3.606,8.32,30,224,224
+243901,data/raw/visignlanguage_video/dataset/train/Rẽ trái/243901.mp4,Rẽ trái,65,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+403578,data/raw/visignlanguage_video/dataset/train/Rẽ trái/403578.mp4,Rẽ trái,65,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+901280,data/raw/visignlanguage_video/dataset/train/Rẽ trái/901280.mp4,Rẽ trái,65,,train,ViSignLanguage-Video,,3.436,8.73,30,224,224
+479430_1,data/raw/visignlanguage_video/dataset/train/San sẻ/479430_1.mp4,San sẻ,66,,train,ViSignLanguage-Video,,3.205,9.36,30,224,224
+557925_1,data/raw/visignlanguage_video/dataset/train/San sẻ/557925_1.mp4,San sẻ,66,,train,ViSignLanguage-Video,,2.483,12.08,30,224,224
+916964,data/raw/visignlanguage_video/dataset/train/San sẻ/916964.mp4,San sẻ,66,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+466346,data/raw/visignlanguage_video/dataset/train/Sốt/466346.mp4,Sốt,67,,train,ViSignLanguage-Video,,1.433,20.93,30,224,224
+862712,data/raw/visignlanguage_video/dataset/train/Sốt/862712.mp4,Sốt,67,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+958729,data/raw/visignlanguage_video/dataset/train/Sốt/958729.mp4,Sốt,67,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+438908,data/raw/visignlanguage_video/dataset/train/Sử dụng/438908.mp4,Sử dụng,68,,train,ViSignLanguage-Video,,2.262,13.26,30,224,224
+469038,data/raw/visignlanguage_video/dataset/train/Sử dụng/469038.mp4,Sử dụng,68,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+720148,data/raw/visignlanguage_video/dataset/train/Sử dụng/720148.mp4,Sử dụng,68,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+560767,data/raw/visignlanguage_video/dataset/train/Thích/560767.mp4,Thích,69,,train,ViSignLanguage-Video,,2.212,13.56,30,224,224
+560767_2,data/raw/visignlanguage_video/dataset/train/Thích/560767_2.mp4,Thích,69,,train,ViSignLanguage-Video,,2.212,13.56,30,224,224
+629057,data/raw/visignlanguage_video/dataset/train/Thích/629057.mp4,Thích,69,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+164879,data/raw/visignlanguage_video/dataset/train/Thăm/164879.mp4,Thăm,70,,train,ViSignLanguage-Video,,1.566,19.16,30,224,224
+188425,data/raw/visignlanguage_video/dataset/train/Thăm/188425.mp4,Thăm,70,,train,ViSignLanguage-Video,,1.676,17.9,30,224,224
+849014,data/raw/visignlanguage_video/dataset/train/Thăm/849014.mp4,Thăm,70,,train,ViSignLanguage-Video,,1.676,17.9,30,224,224
+648141,data/raw/visignlanguage_video/dataset/train/Thương/648141.mp4,Thương,71,,train,ViSignLanguage-Video,,1.669,17.97,30,224,224
+649525,data/raw/visignlanguage_video/dataset/train/Thương/649525.mp4,Thương,71,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+739427_2,data/raw/visignlanguage_video/dataset/train/Thương/739427_2.mp4,Thương,71,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+631699,data/raw/visignlanguage_video/dataset/train/Thất lạc/631699.mp4,Thất lạc,72,,train,ViSignLanguage-Video,,2.404,12.48,30,224,224
+681242_1,data/raw/visignlanguage_video/dataset/train/Thất lạc/681242_1.mp4,Thất lạc,72,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+783501,data/raw/visignlanguage_video/dataset/train/Thất lạc/783501.mp4,Thất lạc,72,,train,ViSignLanguage-Video,,3.25,9.23,30,224,224
+119116,data/raw/visignlanguage_video/dataset/train/Thức dậy/119116.mp4,Thức dậy,73,,train,ViSignLanguage-Video,,2.78,10.79,30,224,224
+410160_1,data/raw/visignlanguage_video/dataset/train/Thức dậy/410160_1.mp4,Thức dậy,73,,train,ViSignLanguage-Video,,2.299,13.05,30,224,224
+748052_1,data/raw/visignlanguage_video/dataset/train/Thức dậy/748052_1.mp4,Thức dậy,73,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+169113,data/raw/visignlanguage_video/dataset/train/Thức ăn/169113.mp4,Thức ăn,74,,train,ViSignLanguage-Video,,3.064,9.79,30,224,224
+510997,data/raw/visignlanguage_video/dataset/train/Thức ăn/510997.mp4,Thức ăn,74,,train,ViSignLanguage-Video,,2.534,11.84,30,224,224
+992931_1,data/raw/visignlanguage_video/dataset/train/Thức ăn/992931_1.mp4,Thức ăn,74,,train,ViSignLanguage-Video,,3.09,9.71,30,224,224
+638289,data/raw/visignlanguage_video/dataset/train/Trưa/638289.mp4,Trưa,75,,train,ViSignLanguage-Video,,3.165,9.48,30,224,224
+772324,data/raw/visignlanguage_video/dataset/train/Trưa/772324.mp4,Trưa,75,,train,ViSignLanguage-Video,,2.566,11.69,30,224,224
+900185,data/raw/visignlanguage_video/dataset/train/Trưa/900185.mp4,Trưa,75,,train,ViSignLanguage-Video,,2.622,11.44,30,224,224
+140163,data/raw/visignlanguage_video/dataset/train/Trường học/140163.mp4,Trường học,76,,train,ViSignLanguage-Video,,2.833,10.59,30,224,224
+595404_2,data/raw/visignlanguage_video/dataset/train/Trường học/595404_2.mp4,Trường học,76,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+977330,data/raw/visignlanguage_video/dataset/train/Trường học/977330.mp4,Trường học,76,,train,ViSignLanguage-Video,,2.833,10.59,30,224,224
+350786,data/raw/visignlanguage_video/dataset/train/Tôi/350786.mp4,Tôi,77,,train,ViSignLanguage-Video,,2.168,13.84,30,224,224
+570735,data/raw/visignlanguage_video/dataset/train/Tôi/570735.mp4,Tôi,77,,train,ViSignLanguage-Video,,1.812,16.56,30,224,224
+854540,data/raw/visignlanguage_video/dataset/train/Tôi/854540.mp4,Tôi,77,,train,ViSignLanguage-Video,,2.698,11.12,30,224,224
+139434,data/raw/visignlanguage_video/dataset/train/Tập luyện/139434.mp4,Tập luyện,78,,train,ViSignLanguage-Video,,1.599,18.76,30,224,224
+425486,data/raw/visignlanguage_video/dataset/train/Tập luyện/425486.mp4,Tập luyện,78,,train,ViSignLanguage-Video,,2.364,12.69,30,224,224
+573866_2,data/raw/visignlanguage_video/dataset/train/Tập luyện/573866_2.mp4,Tập luyện,78,,train,ViSignLanguage-Video,,2.431,12.34,30,224,224
+561999,data/raw/visignlanguage_video/dataset/train/Tối/561999.mp4,Tối,79,,train,ViSignLanguage-Video,,3.171,9.46,30,224,224
+627335,data/raw/visignlanguage_video/dataset/train/Tối/627335.mp4,Tối,79,,train,ViSignLanguage-Video,,2.045,14.67,30,224,224
+940181_1,data/raw/visignlanguage_video/dataset/train/Tối/940181_1.mp4,Tối,79,,train,ViSignLanguage-Video,,2.001,14.99,30,224,224
+352249,data/raw/visignlanguage_video/dataset/train/Uống/352249.mp4,Uống,80,,train,ViSignLanguage-Video,,2.643,11.35,30,224,224
+744674,data/raw/visignlanguage_video/dataset/train/Uống/744674.mp4,Uống,80,,train,ViSignLanguage-Video,,2.177,13.78,30,224,224
+796643,data/raw/visignlanguage_video/dataset/train/Uống/796643.mp4,Uống,80,,train,ViSignLanguage-Video,,2.095,14.32,30,224,224
+491435_1,data/raw/visignlanguage_video/dataset/train/Virus/491435_1.mp4,Virus,81,,train,ViSignLanguage-Video,,4.054,7.4,30,224,224
+505674,data/raw/visignlanguage_video/dataset/train/Virus/505674.mp4,Virus,81,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+883618,data/raw/visignlanguage_video/dataset/train/Virus/883618.mp4,Virus,81,,train,ViSignLanguage-Video,,2.166,13.85,30,224,224
+509420,data/raw/visignlanguage_video/dataset/train/Vâng lời/509420.mp4,Vâng lời,82,,train,ViSignLanguage-Video,,1.4,21.43,30,224,224
+592972_2,data/raw/visignlanguage_video/dataset/train/Vâng lời/592972_2.mp4,Vâng lời,82,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+592972_3,data/raw/visignlanguage_video/dataset/train/Vâng lời/592972_3.mp4,Vâng lời,82,,train,ViSignLanguage-Video,,2.366,12.68,30,224,224
+601776,data/raw/visignlanguage_video/dataset/train/Xa/601776.mp4,Xa,83,,train,ViSignLanguage-Video,,2.062,14.55,30,224,224
+926823_1,data/raw/visignlanguage_video/dataset/train/Xa/926823_1.mp4,Xa,83,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+950916,data/raw/visignlanguage_video/dataset/train/Xa/950916.mp4,Xa,83,,train,ViSignLanguage-Video,,1.957,15.33,30,224,224
+309159,data/raw/visignlanguage_video/dataset/train/Xe máy/309159.mp4,Xe máy,84,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+425138,data/raw/visignlanguage_video/dataset/train/Xe máy/425138.mp4,Xe máy,84,,train,ViSignLanguage-Video,,1.883,15.93,30,224,224
+640418,data/raw/visignlanguage_video/dataset/train/Xe máy/640418.mp4,Xe máy,84,,train,ViSignLanguage-Video,,2.066,14.52,30,224,224
+474314,data/raw/visignlanguage_video/dataset/train/Xe đạp/474314.mp4,Xe đạp,85,,train,ViSignLanguage-Video,,2.809,10.68,30,224,224
+517568_2,data/raw/visignlanguage_video/dataset/train/Xe đạp/517568_2.mp4,Xe đạp,85,,train,ViSignLanguage-Video,,2.768,10.84,30,224,224
+778324,data/raw/visignlanguage_video/dataset/train/Xe đạp/778324.mp4,Xe đạp,85,,train,ViSignLanguage-Video,,2.011,14.92,30,224,224
+455505,data/raw/visignlanguage_video/dataset/train/Xin lỗi/455505.mp4,Xin lỗi,86,,train,ViSignLanguage-Video,,2.973,10.09,30,224,224
+485896,data/raw/visignlanguage_video/dataset/train/Xin lỗi/485896.mp4,Xin lỗi,86,,train,ViSignLanguage-Video,,2.732,10.98,30,224,224
+787584,data/raw/visignlanguage_video/dataset/train/Xin lỗi/787584.mp4,Xin lỗi,86,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+379676_1,data/raw/visignlanguage_video/dataset/train/Xin phép/379676_1.mp4,Xin phép,87,,train,ViSignLanguage-Video,,1.562,19.2,30,224,224
+793024,data/raw/visignlanguage_video/dataset/train/Xin phép/793024.mp4,Xin phép,87,,train,ViSignLanguage-Video,,2.465,12.17,30,224,224
+862400,data/raw/visignlanguage_video/dataset/train/Xin phép/862400.mp4,Xin phép,87,,train,ViSignLanguage-Video,,2.203,13.62,30,224,224
+565471_1,data/raw/visignlanguage_video/dataset/train/Xuất viện/565471_1.mp4,Xuất viện,88,,train,ViSignLanguage-Video,,2.166,13.85,30,224,224
+770532,data/raw/visignlanguage_video/dataset/train/Xuất viện/770532.mp4,Xuất viện,88,,train,ViSignLanguage-Video,,3.198,9.38,30,224,224
+862120,data/raw/visignlanguage_video/dataset/train/Xuất viện/862120.mp4,Xuất viện,88,,train,ViSignLanguage-Video,,4.458,6.73,30,224,224
+127172_1,data/raw/visignlanguage_video/dataset/train/Xúc động/127172_1.mp4,Xúc động,89,,train,ViSignLanguage-Video,,2.722,11.02,30,224,224
+392227,data/raw/visignlanguage_video/dataset/train/Xúc động/392227.mp4,Xúc động,89,,train,ViSignLanguage-Video,,2.078,14.44,30,224,224
+567951,data/raw/visignlanguage_video/dataset/train/Xúc động/567951.mp4,Xúc động,89,,train,ViSignLanguage-Video,,2.034,14.75,30,224,224
+456778,data/raw/visignlanguage_video/dataset/train/Áp dụng/456778.mp4,Áp dụng,90,,train,ViSignLanguage-Video,,1.533,19.57,30,224,224
+678856,data/raw/visignlanguage_video/dataset/train/Áp dụng/678856.mp4,Áp dụng,90,,train,ViSignLanguage-Video,,2.964,10.12,30,224,224
+900581_3,data/raw/visignlanguage_video/dataset/train/Áp dụng/900581_3.mp4,Áp dụng,90,,train,ViSignLanguage-Video,,2.266,13.24,30,224,224
+132663,data/raw/visignlanguage_video/dataset/train/Ô tô/132663.mp4,Ô tô,91,,train,ViSignLanguage-Video,,2.7,11.11,30,224,224
+255539,data/raw/visignlanguage_video/dataset/train/Ô tô/255539.mp4,Ô tô,91,,train,ViSignLanguage-Video,,3.567,8.41,30,224,224
+614084,data/raw/visignlanguage_video/dataset/train/Ô tô/614084.mp4,Ô tô,91,,train,ViSignLanguage-Video,,2.804,10.7,30,224,224
+279451,data/raw/visignlanguage_video/dataset/train/Ăn/279451.mp4,Ăn,92,,train,ViSignLanguage-Video,,1.9,15.79,30,224,224
+498591_3,data/raw/visignlanguage_video/dataset/train/Ăn/498591_3.mp4,Ăn,92,,train,ViSignLanguage-Video,,2.566,11.69,30,224,224
+816751_1,data/raw/visignlanguage_video/dataset/train/Ăn/816751_1.mp4,Ăn,92,,train,ViSignLanguage-Video,,2.199,13.64,30,224,224
+267753_1,data/raw/visignlanguage_video/dataset/train/Ăn mừng/267753_1.mp4,Ăn mừng,93,,train,ViSignLanguage-Video,,3.268,9.18,30,224,224
+479580_2,data/raw/visignlanguage_video/dataset/train/Ăn mừng/479580_2.mp4,Ăn mừng,93,,train,ViSignLanguage-Video,,2.232,13.44,30,224,224
+617488,data/raw/visignlanguage_video/dataset/train/Ăn mừng/617488.mp4,Ăn mừng,93,,train,ViSignLanguage-Video,,2.899,10.35,30,224,224
+417534_1,data/raw/visignlanguage_video/dataset/train/Đi/417534_1.mp4,Đi,94,,train,ViSignLanguage-Video,,2.54,11.81,30,224,224
+438334,data/raw/visignlanguage_video/dataset/train/Đi/438334.mp4,Đi,94,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+965322_1,data/raw/visignlanguage_video/dataset/train/Đi/965322_1.mp4,Đi,94,,train,ViSignLanguage-Video,,2.273,13.2,30,224,224
+265156,data/raw/visignlanguage_video/dataset/train/Đâu/265156.mp4,Đâu,95,,train,ViSignLanguage-Video,,2.166,13.85,30,224,224
+282547_2,data/raw/visignlanguage_video/dataset/train/Đâu/282547_2.mp4,Đâu,95,,train,ViSignLanguage-Video,,2.232,13.44,30,224,224
+310743_1,data/raw/visignlanguage_video/dataset/train/Đâu/310743_1.mp4,Đâu,95,,train,ViSignLanguage-Video,,1.567,19.15,30,224,224
+231414_1,data/raw/visignlanguage_video/dataset/train/Đầu/231414_1.mp4,Đầu,96,,train,ViSignLanguage-Video,,2.183,13.74,30,224,224
+517500_3,data/raw/visignlanguage_video/dataset/train/Đầu/517500_3.mp4,Đầu,96,,train,ViSignLanguage-Video,,2.801,10.71,30,224,224
+741674,data/raw/visignlanguage_video/dataset/train/Đầu/741674.mp4,Đầu,96,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+553633,data/raw/visignlanguage_video/dataset/train/Đẹp/553633.mp4,Đẹp,97,,train,ViSignLanguage-Video,,3.432,8.74,30,224,224
+770872_1,data/raw/visignlanguage_video/dataset/train/Đẹp/770872_1.mp4,Đẹp,97,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+770872_2,data/raw/visignlanguage_video/dataset/train/Đẹp/770872_2.mp4,Đẹp,97,,train,ViSignLanguage-Video,,2.667,11.25,30,224,224
+575575_2,data/raw/visignlanguage_video/dataset/train/Đồng ý/575575_2.mp4,Đồng ý,98,,train,ViSignLanguage-Video,,2.852,10.52,30,224,224
+773088,data/raw/visignlanguage_video/dataset/train/Đồng ý/773088.mp4,Đồng ý,98,,train,ViSignLanguage-Video,,3.119,9.62,30,224,224
+904214,data/raw/visignlanguage_video/dataset/train/Đồng ý/904214.mp4,Đồng ý,98,,train,ViSignLanguage-Video,,2.134,14.06,30,224,224
+631971,data/raw/visignlanguage_video/dataset/train/Ủng hộ/631971.mp4,Ủng hộ,99,,train,ViSignLanguage-Video,,2.379,12.61,30,224,224
+632280,data/raw/visignlanguage_video/dataset/train/Ủng hộ/632280.mp4,Ủng hộ,99,,train,ViSignLanguage-Video,,2.814,10.66,30,224,224
+651613,data/raw/visignlanguage_video/dataset/train/Ủng hộ/651613.mp4,Ủng hộ,99,,train,ViSignLanguage-Video,,2.4,12.5,30,224,224
+809570,data/raw/visignlanguage_video/dataset/train/An ủi/809570.mp4,An ủi,0,,validation,ViSignLanguage-Video,,2.232,13.44,30,224,224
+220116,data/raw/visignlanguage_video/dataset/train/Ban ngày/220116.mp4,Ban ngày,1,,validation,ViSignLanguage-Video,,2.667,11.25,30,224,224
+663054,data/raw/visignlanguage_video/dataset/train/Ban đêm/663054.mp4,Ban đêm,2,,validation,ViSignLanguage-Video,,2.765,10.85,30,224,224
+202664,data/raw/visignlanguage_video/dataset/train/Biết/202664.mp4,Biết,3,,validation,ViSignLanguage-Video,,2.333,12.86,30,224,224
+428838,data/raw/visignlanguage_video/dataset/train/Biếu tặng/428838.mp4,Biếu tặng,4,,validation,ViSignLanguage-Video,,2.997,10.01,30,224,224
+456699_1,data/raw/visignlanguage_video/dataset/train/Bàn tay/456699_1.mp4,Bàn tay,5,,validation,ViSignLanguage-Video,,2.467,12.16,30,224,224
+728038,data/raw/visignlanguage_video/dataset/train/Băn khoăn/728038.mp4,Băn khoăn,6,,validation,ViSignLanguage-Video,,2.266,13.24,30,224,224
+234628_1,data/raw/visignlanguage_video/dataset/train/Bạn thân/234628_1.mp4,Bạn thân,7,,validation,ViSignLanguage-Video,,2.311,12.98,30,224,224
+559381,data/raw/visignlanguage_video/dataset/train/Bế mạc/559381.mp4,Bế mạc,8,,validation,ViSignLanguage-Video,,2.431,12.34,30,224,224
+842225,data/raw/visignlanguage_video/dataset/train/Bệnh nhân/842225.mp4,Bệnh nhân,9,,validation,ViSignLanguage-Video,,4.854,6.18,30,224,224
+299659,data/raw/visignlanguage_video/dataset/train/Bệnh viện/299659.mp4,Bệnh viện,10,,validation,ViSignLanguage-Video,,2.868,10.46,30,224,224
+358175_2,data/raw/visignlanguage_video/dataset/train/Bộ y tế/358175_2.mp4,Bộ y tế,11,,validation,ViSignLanguage-Video,,3.963,7.57,30,224,224
+888295,data/raw/visignlanguage_video/dataset/train/Chiều/888295.mp4,Chiều,12,,validation,ViSignLanguage-Video,,2.667,11.25,30,224,224
+588557,data/raw/visignlanguage_video/dataset/train/Cho/588557.mp4,Cho,13,,validation,ViSignLanguage-Video,,1.666,18.01,30,224,224
+392683,data/raw/visignlanguage_video/dataset/train/Chào/392683.mp4,Chào,14,,validation,ViSignLanguage-Video,,2.6,11.54,30,224,224
+820221,data/raw/visignlanguage_video/dataset/train/Chân/820221.mp4,Chân,15,,validation,ViSignLanguage-Video,,3.0,10.0,30,224,224
+664365,data/raw/visignlanguage_video/dataset/train/Chúng ta/664365.mp4,Chúng ta,16,,validation,ViSignLanguage-Video,,2.846,10.54,30,224,224
+736130,data/raw/visignlanguage_video/dataset/train/Chạy/736130.mp4,Chạy,17,,validation,ViSignLanguage-Video,,2.498,12.01,30,224,224
+631756,data/raw/visignlanguage_video/dataset/train/Chấp nhận/631756.mp4,Chấp nhận,18,,validation,ViSignLanguage-Video,,2.333,12.86,30,224,224
+519066,data/raw/visignlanguage_video/dataset/train/Chậm lại/519066.mp4,Chậm lại,19,,validation,ViSignLanguage-Video,,2.366,12.68,30,224,224
+321941_2,data/raw/visignlanguage_video/dataset/train/Con gấu/321941_2.mp4,Con gấu,20,,validation,ViSignLanguage-Video,,2.004,14.97,30,224,224
+172132,data/raw/visignlanguage_video/dataset/train/Cá/172132.mp4,Cá,21,,validation,ViSignLanguage-Video,,2.7,11.11,30,224,224
+108203,data/raw/visignlanguage_video/dataset/train/Cách ly/108203.mp4,Cách ly,22,,validation,ViSignLanguage-Video,,2.171,13.82,30,224,224
+908577,data/raw/visignlanguage_video/dataset/train/Cám dỗ/908577.mp4,Cám dỗ,23,,validation,ViSignLanguage-Video,,1.666,18.01,30,224,224
+781725_1,data/raw/visignlanguage_video/dataset/train/Có thể/781725_1.mp4,Có thể,24,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+783414,data/raw/visignlanguage_video/dataset/train/Cơ thể/783414.mp4,Cơ thể,25,,validation,ViSignLanguage-Video,,1.695,17.7,30,224,224
+470858,data/raw/visignlanguage_video/dataset/train/Cảm ơn/470858.mp4,Cảm ơn,26,,validation,ViSignLanguage-Video,,2.333,12.86,30,224,224
+824586,data/raw/visignlanguage_video/dataset/train/Cần/824586.mp4,Cần,27,,validation,ViSignLanguage-Video,,2.498,12.01,30,224,224
+810250,data/raw/visignlanguage_video/dataset/train/Cứu/810250.mp4,Cứu,28,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+817497,data/raw/visignlanguage_video/dataset/train/Dạy dỗ/817497.mp4,Dạy dỗ,29,,validation,ViSignLanguage-Video,,2.465,12.17,30,224,224
+556732,data/raw/visignlanguage_video/dataset/train/Dễ/556732.mp4,Dễ,30,,validation,ViSignLanguage-Video,,2.7,11.11,30,224,224
+725113,data/raw/visignlanguage_video/dataset/train/Ghét/725113.mp4,Ghét,31,,validation,ViSignLanguage-Video,,2.4,12.5,30,224,224
+353080,data/raw/visignlanguage_video/dataset/train/Giúp/353080.mp4,Giúp,32,,validation,ViSignLanguage-Video,,1.584,18.94,30,224,224
+416950,data/raw/visignlanguage_video/dataset/train/Ho/416950.mp4,Ho,33,,validation,ViSignLanguage-Video,,1.466,20.46,30,224,224
+342720,data/raw/visignlanguage_video/dataset/train/Hy sinh/342720.mp4,Hy sinh,34,,validation,ViSignLanguage-Video,,2.997,10.01,30,224,224
+446859,data/raw/visignlanguage_video/dataset/train/Hâm mộ/446859.mp4,Hâm mộ,35,,validation,ViSignLanguage-Video,,2.415,12.42,30,224,224
+768854,data/raw/visignlanguage_video/dataset/train/Hôm nay/768854.mp4,Hôm nay,36,,validation,ViSignLanguage-Video,,2.329,12.88,30,224,224
+685181_1,data/raw/visignlanguage_video/dataset/train/Họ/685181_1.mp4,Họ,37,,validation,ViSignLanguage-Video,,2.566,11.69,30,224,224
+411797_2,data/raw/visignlanguage_video/dataset/train/Học sinh/411797_2.mp4,Học sinh,38,,validation,ViSignLanguage-Video,,2.7,11.11,30,224,224
+733039_2,data/raw/visignlanguage_video/dataset/train/Khai báo/733039_2.mp4,Khai báo,39,,validation,ViSignLanguage-Video,,1.433,20.94,30,224,224
+154118,data/raw/visignlanguage_video/dataset/train/Khu cách ly/154118.mp4,Khu cách ly,40,,validation,ViSignLanguage-Video,,2.538,11.82,30,224,224
+953797,data/raw/visignlanguage_video/dataset/train/Khóc/953797.mp4,Khóc,41,,validation,ViSignLanguage-Video,,2.469,12.15,30,224,224
+783157,data/raw/visignlanguage_video/dataset/train/Khẩu trang/783157.mp4,Khẩu trang,42,,validation,ViSignLanguage-Video,,3.132,9.58,30,224,224
+820775_2,data/raw/visignlanguage_video/dataset/train/Kết hôn/820775_2.mp4,Kết hôn,43,,validation,ViSignLanguage-Video,,0.801,19.97,16,224,224
+975271,data/raw/visignlanguage_video/dataset/train/Lo lắng/975271.mp4,Lo lắng,44,,validation,ViSignLanguage-Video,,1.703,17.62,30,224,224
+227324,data/raw/visignlanguage_video/dataset/train/Lây bệnh/227324.mp4,Lây bệnh,45,,validation,ViSignLanguage-Video,,3.155,9.51,30,224,224
+433632,data/raw/visignlanguage_video/dataset/train/Mua/433632.mp4,Mua,46,,validation,ViSignLanguage-Video,,1.961,15.3,30,224,224
+380150,data/raw/visignlanguage_video/dataset/train/Mời vào/380150.mp4,Mời vào,47,,validation,ViSignLanguage-Video,,3.597,8.34,30,224,224
+194769_1,data/raw/visignlanguage_video/dataset/train/Nghe/194769_1.mp4,Nghe,48,,validation,ViSignLanguage-Video,,2.674,11.22,30,224,224
+673149,data/raw/visignlanguage_video/dataset/train/Nghỉ ngơi/673149.mp4,Nghỉ ngơi,49,,validation,ViSignLanguage-Video,,2.465,12.17,30,224,224
+620856,data/raw/visignlanguage_video/dataset/train/Ngón tay/620856.mp4,Ngón tay,50,,validation,ViSignLanguage-Video,,2.7,11.11,30,224,224
+284171,data/raw/visignlanguage_video/dataset/train/Nhà/284171.mp4,Nhà,51,,validation,ViSignLanguage-Video,,2.433,12.33,30,224,224
+455168_1,data/raw/visignlanguage_video/dataset/train/Nhìn/455168_1.mp4,Nhìn,52,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+605254,data/raw/visignlanguage_video/dataset/train/Nhầm/605254.mp4,Nhầm,53,,validation,ViSignLanguage-Video,,2.852,10.52,30,224,224
+688678,data/raw/visignlanguage_video/dataset/train/Nhớ/688678.mp4,Nhớ,54,,validation,ViSignLanguage-Video,,1.502,19.97,30,224,224
+134305_3,data/raw/visignlanguage_video/dataset/train/Nói/134305_3.mp4,Nói,55,,validation,ViSignLanguage-Video,,2.844,10.55,30,224,224
+666456,data/raw/visignlanguage_video/dataset/train/Nói xấu/666456.mp4,Nói xấu,56,,validation,ViSignLanguage-Video,,2.299,13.05,30,224,224
+154944,data/raw/visignlanguage_video/dataset/train/Nôn ói/154944.mp4,Nôn ói,57,,validation,ViSignLanguage-Video,,3.205,9.36,30,224,224
+444525,data/raw/visignlanguage_video/dataset/train/Nặng/444525.mp4,Nặng,58,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+874683,data/raw/visignlanguage_video/dataset/train/Phía sau/874683.mp4,Phía sau,59,,validation,ViSignLanguage-Video,,2.783,10.78,30,224,224
+427730_2,data/raw/visignlanguage_video/dataset/train/Phạt/427730_2.mp4,Phạt,60,,validation,ViSignLanguage-Video,,2.479,12.1,30,224,224
+289179,data/raw/visignlanguage_video/dataset/train/Phỏng vấn/289179.mp4,Phỏng vấn,61,,validation,ViSignLanguage-Video,,2.513,11.94,30,224,224
+106402_1,data/raw/visignlanguage_video/dataset/train/Phục hồi/106402_1.mp4,Phục hồi,62,,validation,ViSignLanguage-Video,,1.666,18.01,30,224,224
+185544,data/raw/visignlanguage_video/dataset/train/Rau/185544.mp4,Rau,63,,validation,ViSignLanguage-Video,,1.984,15.12,30,224,224
+514463,data/raw/visignlanguage_video/dataset/train/Rẽ phải/514463.mp4,Rẽ phải,64,,validation,ViSignLanguage-Video,,3.534,8.49,30,224,224
+878086,data/raw/visignlanguage_video/dataset/train/Rẽ trái/878086.mp4,Rẽ trái,65,,validation,ViSignLanguage-Video,,2.639,11.37,30,224,224
+556839,data/raw/visignlanguage_video/dataset/train/San sẻ/556839.mp4,San sẻ,66,,validation,ViSignLanguage-Video,,2.964,10.12,30,224,224
+468154,data/raw/visignlanguage_video/dataset/train/Sốt/468154.mp4,Sốt,67,,validation,ViSignLanguage-Video,,2.964,10.12,30,224,224
+766158,data/raw/visignlanguage_video/dataset/train/Sử dụng/766158.mp4,Sử dụng,68,,validation,ViSignLanguage-Video,,2.82,10.64,30,224,224
+560767_1,data/raw/visignlanguage_video/dataset/train/Thích/560767_1.mp4,Thích,69,,validation,ViSignLanguage-Video,,2.212,13.56,30,224,224
+978053,data/raw/visignlanguage_video/dataset/train/Thăm/978053.mp4,Thăm,70,,validation,ViSignLanguage-Video,,2.431,12.34,30,224,224
+739427_3,data/raw/visignlanguage_video/dataset/train/Thương/739427_3.mp4,Thương,71,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+180458,data/raw/visignlanguage_video/dataset/train/Thất lạc/180458.mp4,Thất lạc,72,,validation,ViSignLanguage-Video,,2.4,12.5,30,224,224
+609892_1,data/raw/visignlanguage_video/dataset/train/Thức dậy/609892_1.mp4,Thức dậy,73,,validation,ViSignLanguage-Video,,1.916,15.66,30,224,224
+397949,data/raw/visignlanguage_video/dataset/train/Thức ăn/397949.mp4,Thức ăn,74,,validation,ViSignLanguage-Video,,2.195,13.67,30,224,224
+626392_2,data/raw/visignlanguage_video/dataset/train/Trưa/626392_2.mp4,Trưa,75,,validation,ViSignLanguage-Video,,2.51,11.95,30,224,224
+543814,data/raw/visignlanguage_video/dataset/train/Trường học/543814.mp4,Trường học,76,,validation,ViSignLanguage-Video,,2.266,13.24,30,224,224
+884897,data/raw/visignlanguage_video/dataset/train/Tôi/884897.mp4,Tôi,77,,validation,ViSignLanguage-Video,,2.562,11.71,30,224,224
+177794,data/raw/visignlanguage_video/dataset/train/Tập luyện/177794.mp4,Tập luyện,78,,validation,ViSignLanguage-Video,,2.443,12.28,30,224,224
+269930_2,data/raw/visignlanguage_video/dataset/train/Tối/269930_2.mp4,Tối,79,,validation,ViSignLanguage-Video,,1.879,15.97,30,224,224
+469954,data/raw/visignlanguage_video/dataset/train/Uống/469954.mp4,Uống,80,,validation,ViSignLanguage-Video,,2.447,12.26,30,224,224
+365971,data/raw/visignlanguage_video/dataset/train/Virus/365971.mp4,Virus,81,,validation,ViSignLanguage-Video,,2.166,13.85,30,224,224
+681070,data/raw/visignlanguage_video/dataset/train/Vâng lời/681070.mp4,Vâng lời,82,,validation,ViSignLanguage-Video,,2.283,13.14,30,224,224
+926823,data/raw/visignlanguage_video/dataset/train/Xa/926823.mp4,Xa,83,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+143941,data/raw/visignlanguage_video/dataset/train/Xe máy/143941.mp4,Xe máy,84,,validation,ViSignLanguage-Video,,2.667,11.25,30,224,224
+138399,data/raw/visignlanguage_video/dataset/train/Xe đạp/138399.mp4,Xe đạp,85,,validation,ViSignLanguage-Video,,2.6,11.54,30,224,224
+448048,data/raw/visignlanguage_video/dataset/train/Xin lỗi/448048.mp4,Xin lỗi,86,,validation,ViSignLanguage-Video,,3.421,8.77,30,224,224
+621691,data/raw/visignlanguage_video/dataset/train/Xin phép/621691.mp4,Xin phép,87,,validation,ViSignLanguage-Video,,1.567,19.15,30,224,224
+812413,data/raw/visignlanguage_video/dataset/train/Xuất viện/812413.mp4,Xuất viện,88,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+223481,data/raw/visignlanguage_video/dataset/train/Xúc động/223481.mp4,Xúc động,89,,validation,ViSignLanguage-Video,,2.653,11.31,30,224,224
+201414,data/raw/visignlanguage_video/dataset/train/Áp dụng/201414.mp4,Áp dụng,90,,validation,ViSignLanguage-Video,,2.964,10.12,30,224,224
+409222,data/raw/visignlanguage_video/dataset/train/Ô tô/409222.mp4,Ô tô,91,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+974628,data/raw/visignlanguage_video/dataset/train/Ăn/974628.mp4,Ăn,92,,validation,ViSignLanguage-Video,,2.523,11.89,30,224,224
+634277,data/raw/visignlanguage_video/dataset/train/Ăn mừng/634277.mp4,Ăn mừng,93,,validation,ViSignLanguage-Video,,2.232,13.44,30,224,224
+418897_1,data/raw/visignlanguage_video/dataset/train/Đi/418897_1.mp4,Đi,94,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+348235,data/raw/visignlanguage_video/dataset/train/Đâu/348235.mp4,Đâu,95,,validation,ViSignLanguage-Video,,2.4,12.5,30,224,224
+478427,data/raw/visignlanguage_video/dataset/train/Đầu/478427.mp4,Đầu,96,,validation,ViSignLanguage-Video,,2.134,14.06,30,224,224
+905077,data/raw/visignlanguage_video/dataset/train/Đẹp/905077.mp4,Đẹp,97,,validation,ViSignLanguage-Video,,3.135,9.57,30,224,224
+525818_1,data/raw/visignlanguage_video/dataset/train/Đồng ý/525818_1.mp4,Đồng ý,98,,validation,ViSignLanguage-Video,,3.932,7.63,30,224,224
+924613,data/raw/visignlanguage_video/dataset/train/Ủng hộ/924613.mp4,Ủng hộ,99,,validation,ViSignLanguage-Video,,3.279,9.15,30,224,224

@@ -1,0 +1,21 @@
+model:
+  type: multimodal
+  fusion_type: concat
+  shared_dim: 128
+  pretrained_model: MCG-NJU/videomae-base
+  pretrained: true
+  freeze_rgb: true
+  freeze_pose: false
+  embedding_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+
+video:
+  num_frames: 16
+  sampling: uniform
+
+rgb:
+  resize: 224
+  crop_size: 224
+  horizontal_flip: false

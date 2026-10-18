@@ -1,0 +1,9 @@
+dataset:
+  name: vsl400
+  adapter: vsl400
+  root: data/raw/vsl400
+  metadata_csv: data/metadata/vsl400.csv
+
+validation:
+  inspect_videos: true
+

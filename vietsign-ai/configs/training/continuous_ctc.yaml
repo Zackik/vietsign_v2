@@ -1,0 +1,67 @@
+seed: 42
+task:
+  type: continuous_recognition
+
+run:
+  name: continuous_ctc_transformer
+  output_dir: outputs/runs
+
+dataset:
+  config: configs/data/continuous_synthetic.yaml
+  cache_root: data/cache/keypoints
+  expected_fingerprint: null
+  split_strategy: signer_independent
+
+sequence:
+  mode: variable
+  length: null
+
+features:
+  left_hand: true
+  right_hand: true
+  pose: true
+  validity: true
+  confidence: false
+  source_mask: false
+  velocity: false
+
+data_quality:
+  minimum_valid_joint_ratio: 0.0
+  reject_empty: true
+
+model:
+  type: ctc_recognizer
+  embedding_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+
+ctc:
+  blank_token: "<blank>"
+  zero_infinity: true
+
+training:
+  epochs: 50
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  device: auto
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+loss:
+  class_weighting: none
+
+early_stopping:
+  enabled: true
+  patience: 10
+  metric: loss
+
+evaluation:
+  fail_on_signer_overlap: false
+  top_k: 5

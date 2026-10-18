@@ -1,0 +1,8 @@
+dataset:
+  name: ViSignLanguage-Video
+  adapter: custom_csv
+  root: .
+  metadata_csv: data/metadata/visignlanguage_video_smoke.csv
+
+validation:
+  inspect_videos: false

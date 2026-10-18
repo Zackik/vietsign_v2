@@ -1,0 +1,50 @@
+seed: 42
+task:
+  type: gloss_translation
+
+run:
+  name: gloss_translation_transformer
+  output_dir: outputs/runs
+
+dataset:
+  config: configs/data/translation_synthetic.yaml
+  cache_root: data/cache/keypoints
+
+model:
+  type: gloss_transformer
+  d_model: 64
+  num_heads: 4
+  encoder_layers: 2
+  decoder_layers: 2
+  dim_feedforward: 128
+  dropout: 0.0
+
+translation:
+  lowercase_vietnamese: false
+  uppercase_glosses: true
+  max_source_length: 16
+  max_target_length: 16
+  reject_over_length: true
+
+decoding:
+  type: greedy
+  max_new_tokens: 16
+
+training:
+  epochs: 120
+  batch_size: 4
+  learning_rate: 0.003
+  weight_decay: 0.0
+  gradient_clip_norm: 1.0
+  device: cpu
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+early_stopping:
+  enabled: false
+  patience: 5
+  metric: chrf

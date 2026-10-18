@@ -1,0 +1,20 @@
+model:
+  type: ctrgcn
+  channels: [64, 64, 128, 256]
+  dropout: 0.2
+  relation_reduction: 8
+  graph:
+    type: vietsign55
+
+sequence:
+  mode: fixed
+  length: 64
+
+features:
+  left_hand: true
+  right_hand: true
+  pose: true
+  validity: true
+  confidence: false
+  source_mask: false
+  velocity: false

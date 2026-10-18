@@ -1,0 +1,63 @@
+seed: 42
+
+run:
+  name: visignlanguage_tiny_rgb_smoke
+  output_dir: outputs/real_experiments/visignlanguage_smoke
+
+task:
+  type: isolated_recognition
+
+dataset:
+  config: configs/data/visignlanguage_video_smoke.yaml
+  cache_root: data/cache/keypoints
+  expected_fingerprint: null
+  split_strategy: stratified_label_smoke
+
+video:
+  num_frames: 4
+  sampling: uniform
+
+rgb:
+  resize: 64
+  crop_size: 64
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  horizontal_flip: false
+  random_crop: false
+  cache_root: data/cache/rgb/visignlanguage_smoke
+
+model:
+  type: videomae
+  pretrained_model: MCG-NJU/videomae-base
+  pretrained: false
+  freeze_backbone: false
+  hidden_dim: 64
+  dropout: 0.2
+
+training:
+  epochs: 1
+  batch_size: 32
+  gradient_accumulation_steps: 1
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  mixed_precision: false
+  device: cpu
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+loss:
+  class_weighting: inverse_frequency
+
+early_stopping:
+  enabled: false
+  patience: 1
+  metric: top1_accuracy
+
+evaluation:
+  fail_on_signer_overlap: false
+  top_k: 5

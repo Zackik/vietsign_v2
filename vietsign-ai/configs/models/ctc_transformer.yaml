@@ -1,0 +1,25 @@
+task:
+  type: continuous_recognition
+
+model:
+  type: ctc_recognizer
+  embedding_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+
+ctc:
+  blank_token: "<blank>"
+  zero_infinity: true
+
+sequence:
+  mode: variable
+
+features:
+  left_hand: true
+  right_hand: true
+  pose: true
+  validity: true
+  confidence: false
+  source_mask: false
+  velocity: false

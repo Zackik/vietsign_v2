@@ -1,0 +1,74 @@
+seed: 42
+
+run:
+  name: voya_direct_baseline
+  output_dir: outputs/real_experiments/voya_direct
+
+data:
+  dataset: VOYA_VSL
+  root: data/raw/voya_vsl_probe
+  representation: native_1605
+  canonical_mapping: false
+  real_data: true
+  signer_independent: false
+  cache_size: 4
+
+experiment:
+  minimum_classes: 2
+  minimum_samples_per_class: 60
+  max_classes: 4
+  max_samples_per_class: 80
+  class_selection: top_n_by_sample_count_then_label_id
+  selection_uses_test_performance: false
+
+split:
+  type: sample_stratified
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+  signer_independent: false
+
+normalization:
+  type: per_feature_zscore
+  fit_split: train
+
+model:
+  type: flat_feature_transformer
+  input_mode: flat_features
+  input_dim: 1605
+  d_model: 64
+  num_layers: 1
+  num_heads: 4
+  dropout: 0.1
+
+training:
+  epochs: 3
+  batch_size: 32
+  learning_rate: 0.0005
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  device: auto
+
+overfit_check:
+  classes: 2
+  samples_per_class: 8
+  epochs: 20
+  batch_size: 8
+  learning_rate: 0.003
+  minimum_top1: 0.80
+
+baseline:
+  enabled: true
+  hidden_dim: 64
+  epochs: 2
+  learning_rate: 0.001
+
+metrics:
+  top_k: 5
+  confusion_matrix: true
+  per_class_accuracy: true
+
+metadata:
+  checkpoint_maturity: experimental_real_data
+  not_signer_independent: true
+  canonical_vietsign55: false

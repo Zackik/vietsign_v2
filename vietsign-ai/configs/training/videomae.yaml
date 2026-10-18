@@ -1,0 +1,59 @@
+seed: 42
+run:
+  name: videomae_rgb_baseline
+  output_dir: outputs/runs
+
+dataset:
+  config: configs/data/vsl400.yaml
+  cache_root: data/cache/keypoints
+  expected_fingerprint: null
+  split_strategy: signer_independent
+
+video:
+  num_frames: 16
+  sampling: uniform
+
+rgb:
+  resize: 224
+  crop_size: 224
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  horizontal_flip: false
+  random_crop: false
+  cache_root: data/cache/rgb/videomae
+
+model:
+  type: videomae
+  pretrained_model: MCG-NJU/videomae-base
+  pretrained: true
+  freeze_backbone: true
+  hidden_dim: 128
+  dropout: 0.1
+
+training:
+  epochs: 20
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  mixed_precision: false
+  device: auto
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+loss:
+  class_weighting: none
+
+early_stopping:
+  enabled: true
+  patience: 5
+  metric: macro_f1
+
+evaluation:
+  fail_on_signer_overlap: false
+  top_k: 5

@@ -1,0 +1,152 @@
+:root {
+  color: #16201c;
+  background: #f6f8f7;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.tabs button,
+.panel button {
+  border: 1px solid #b8c6bf;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.tabs button.active,
+.panel button:hover {
+  background: #173d35;
+  color: #ffffff;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.card,
+.panel,
+.result {
+  background: #ffffff;
+  border: 1px solid #dce4df;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #4b5b54;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #e8eee9;
+  border: 1px solid #cad8d0;
+}
+
+.pill.dev {
+  background: #fff5d8;
+}
+
+.pill.offline {
+  background: #ffe1e1;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+input,
+select {
+  border: 1px solid #b8c6bf;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+video {
+  width: min(100%, 640px);
+  aspect-ratio: 16 / 9;
+  background: #101816;
+  border-radius: 8px;
+}
+
+.result {
+  min-height: 180px;
+  overflow: auto;
+  margin-top: 12px;
+}
+
+.muted {
+  color: #5f6c66;
+}
+
+.translation-output {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #cdd9d3;
+  border-radius: 8px;
+  background: #f8fbf9;
+}
+
+.translation-output strong {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #173d35;
+}

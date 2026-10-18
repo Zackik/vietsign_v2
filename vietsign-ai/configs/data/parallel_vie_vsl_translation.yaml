@@ -1,0 +1,8 @@
+dataset:
+  name: Parallel-Corpus-Vie-VSL
+  adapter: custom_csv
+  root: data/raw/parallel_corpus_vie_vsl
+  metadata_csv: data/metadata/parallel_vie_vsl_translation.csv
+
+validation:
+  inspect_videos: false

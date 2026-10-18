@@ -1,0 +1,10 @@
+model:
+  type: flat_feature_transformer
+  input_mode: flat_features
+  input_dim: 1605
+  d_model: 64
+  num_layers: 1
+  num_heads: 4
+  dropout: 0.1
+  representation: native_1605
+  canonical_mapping: false

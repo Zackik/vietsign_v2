@@ -1,0 +1,50 @@
+seed: 42
+task:
+  type: gloss_translation
+
+run:
+  name: parallel_vie_vsl_gloss_translation
+  output_dir: outputs/real_experiments/translation
+
+dataset:
+  config: configs/data/parallel_vie_vsl_translation.yaml
+  cache_root: data/cache/keypoints
+
+model:
+  type: gloss_transformer
+  d_model: 96
+  num_heads: 4
+  encoder_layers: 2
+  decoder_layers: 2
+  dim_feedforward: 192
+  dropout: 0.1
+
+translation:
+  lowercase_vietnamese: false
+  uppercase_glosses: true
+  max_source_length: 48
+  max_target_length: 48
+  reject_over_length: true
+
+decoding:
+  type: greedy
+  max_new_tokens: 48
+
+training:
+  epochs: 1
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0
+  gradient_clip_norm: 1.0
+  device: cpu
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+early_stopping:
+  enabled: true
+  patience: 3
+  metric: chrf

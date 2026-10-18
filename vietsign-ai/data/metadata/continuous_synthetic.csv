@@ -1,0 +1,6 @@
+sample_id,video_path,glosses,signer_id,split
+cs_train_001,data/raw/synthetic/cs_train_001.mp4,TOI MUON NUOC,signer_a,train
+cs_train_002,data/raw/synthetic/cs_train_002.mp4,TOI TOI NUOC,signer_b,train
+cs_train_003,data/raw/synthetic/cs_train_003.mp4,BAN MUON GI,signer_c,train
+cs_val_001,data/raw/synthetic/cs_val_001.mp4,TOI MUON NUOC,signer_d,validation
+cs_val_002,data/raw/synthetic/cs_val_002.mp4,TOI TOI NUOC,signer_e,validation

@@ -1,0 +1,8 @@
+dataset:
+  name: translation_synthetic
+  adapter: custom_csv
+  root: .
+  metadata_csv: data/metadata/translation_synthetic.csv
+
+validation:
+  inspect_videos: false

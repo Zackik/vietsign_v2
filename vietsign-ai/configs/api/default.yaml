@@ -1,0 +1,69 @@
+host: 127.0.0.1
+port: 8000
+device: auto
+default_pipeline: continuous_translate
+
+upload:
+  max_upload_mb: 100
+  max_duration_seconds: 30
+  allowed_extensions:
+    - .mp4
+    - .mov
+    - .avi
+    - .mkv
+    - .webm
+  temp_dir: outputs/tmp/uploads
+
+cors:
+  allow_origins:
+    - http://localhost:3000
+    - http://127.0.0.1:3000
+    - http://localhost:8080
+    - http://127.0.0.1:8080
+  allow_credentials: false
+
+realtime:
+  window_size: 32
+  stride: 8
+  minimum_frames: 16
+  smoothing: majority_vote
+  confidence_threshold: 0.5
+  duplicate_cooldown_windows: 3
+
+models:
+  - name: synthetic_cslr
+    task: continuous_recognition
+    modality: keypoints
+    config_path: configs/training/continuous_ctc.yaml
+    checkpoint_path: outputs/runs/continuous_ctc_transformer-20261005-220931/best.pt
+    development_only: true
+    maturity: development
+    load_on_start: false
+    enabled: true
+  - name: synthetic_translator
+    task: gloss_translation
+    modality: text
+    config_path: configs/training/gloss_translation.yaml
+    checkpoint_path: outputs/runs/gloss_translation_transformer-20261005-222257/best.pt
+    development_only: true
+    maturity: development
+    load_on_start: false
+    enabled: true
+  - name: parallel_vie_vsl_translator
+    task: gloss_translation
+    modality: text
+    config_path: configs/training/parallel_vie_vsl_translation.yaml
+    checkpoint_path: outputs/real_experiments/translation/parallel_vie_vsl_gloss_translation-20261006-120440/best.pt
+    development_only: false
+    maturity: experimental_real_data
+    load_on_start: false
+    enabled: true
+  - name: visignlanguage_tiny_rgb
+    task: rgb_recognition
+    modality: rgb_video
+    config_path: configs/training/visignlanguage_tiny_rgb.yaml
+    checkpoint_path: outputs/real_experiments/visignlanguage/visignlanguage_tiny_rgb-20261006-151357/best.pt
+    development_only: false
+    maturity: experimental_real_data
+    load_on_start: false
+    enabled: true

@@ -1,0 +1,8 @@
+dataset:
+  name: ViSignLanguage-Video
+  adapter: visignlanguage_video
+  root: data/raw/visignlanguage_video/dataset
+  metadata_csv: data/raw/visignlanguage_video/dataset_metadata.csv
+
+validation:
+  inspect_videos: false

@@ -1,0 +1,39 @@
+dataset_config: configs/data/vsl400.yaml
+
+extractor:
+  type: mediapipe_tasks
+  hands: true
+  pose: true
+  face: false
+  hand_model: models/mediapipe/hand_landmarker.task
+  pose_model: models/mediapipe/pose_landmarker.task
+
+video:
+  target_fps: 25
+  num_frames: 64
+  sampling: uniform
+
+normalization:
+  type: body_relative
+
+interpolation:
+  enabled: true
+  max_gap: 3
+
+smoothing:
+  enabled: false
+  type: ema
+  alpha: 0.6
+
+features:
+  velocity: true
+  acceleration: false
+
+cache:
+  enabled: true
+  root: data/cache/keypoints
+  reuse: true
+
+warnings:
+  hand_coverage_threshold: 0.5
+

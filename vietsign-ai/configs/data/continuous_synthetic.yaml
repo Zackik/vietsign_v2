@@ -1,0 +1,8 @@
+dataset:
+  name: continuous_synthetic
+  adapter: custom_csv
+  root: .
+  metadata_csv: data/metadata/continuous_synthetic.csv
+
+validation:
+  inspect_videos: false

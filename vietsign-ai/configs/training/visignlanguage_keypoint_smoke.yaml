@@ -1,0 +1,65 @@
+seed: 42
+
+run:
+  name: visignlanguage_keypoint_smoke
+  output_dir: outputs/real_experiments/visignlanguage_keypoints_smoke
+
+task:
+  type: isolated_recognition
+
+dataset:
+  config: configs/data/visignlanguage_video_smoke.yaml
+  cache_root: data/cache/keypoints/visignlanguage_rtmpose_smoke
+  expected_fingerprint: null
+  split_strategy: stratified_label_smoke
+
+sequence:
+  mode: fixed
+  length: 12
+
+features:
+  left_hand: true
+  right_hand: true
+  pose: true
+  validity: true
+  confidence: false
+  source_mask: false
+  velocity: false
+
+data_quality:
+  minimum_valid_joint_ratio: 0.01
+  reject_empty: true
+
+model:
+  type: temporal_transformer
+  embedding_dim: 96
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.15
+  positional_encoding: sinusoidal
+
+training:
+  epochs: 8
+  batch_size: 32
+  learning_rate: 0.0007
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  device: cpu
+
+optimizer:
+  type: adamw
+
+scheduler:
+  type: none
+
+loss:
+  class_weighting: inverse_frequency
+
+early_stopping:
+  enabled: true
+  patience: 3
+  metric: top1_accuracy
+
+evaluation:
+  fail_on_signer_overlap: false
+  top_k: 5
